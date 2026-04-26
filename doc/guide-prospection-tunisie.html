@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Guide de prospection EduPilot — Tunisie</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1F2937;
+  line-height: 1.6;
+  padding: 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 8px;
+  border-bottom: 3px solid #2563EB;
+  padding-bottom: 12px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: #1E40AF;
+  border-left: 5px solid #2563EB;
+  padding-left: 12px;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  color: #4B5563;
+}
+.subtitle {
+  font-size: 15px;
+  color: #6B7280;
+  margin-bottom: 28px;
+}
+p { margin-bottom: 12px; }
+ul, ol {
+  margin-left: 24px;
+  margin-bottom: 14px;
+}
+li { padding: 4px 0; }
+.toc {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 16px 22px;
+  margin-bottom: 28px;
+}
+.toc h3 {
+  margin-top: 0;
+  color: #374151;
+}
+.toc ol {
+  font-size: 14px;
+}
+.intro {
+  background: #EFF6FF;
+  border-left: 4px solid #2563EB;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+th {
+  background: #2563EB;
+  color: white;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+}
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: top;
+}
+tr:nth-child(even) td {
+  background: #F9FAFB;
+}
+.priority-1 { background: #FEF3C7 !important; }
+.priority-1 td { font-weight: 500; }
+.tip-box {
+  background: #ECFDF5;
+  border-left: 4px solid #10B981;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+}
+.tip-box h4 { color: #047857; margin-top: 0; }
+.warning-box {
+  background: #FFFBEB;
+  border-left: 4px solid #F59E0B;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+}
+.warning-box h4 { color: #B45309; margin-top: 0; }
+.danger-box {
+  background: #FEF2F2;
+  border-left: 4px solid #DC2626;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+}
+.danger-box h4 { color: #991B1B; margin-top: 0; }
+.script-box {
+  background: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 14px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: #374151;
+}
+.script-box strong {
+  color: #1E40AF;
+  font-style: normal;
+}
+.code-block {
+  background: #1F2937;
+  color: #F9FAFB;
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  margin: 12px 0;
+  overflow-x: auto;
+}
+.checklist {
+  list-style: none;
+  margin-left: 0;
+}
+.checklist li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+.checklist li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  color: #2563EB;
+  font-size: 18px;
+  font-weight: bold;
+}
+.timeline-item {
+  border-left: 3px solid #2563EB;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  background: #F9FAFB;
+  border-radius: 0 6px 6px 0;
+}
+.timeline-item h4 {
+  color: #1E40AF;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.school-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.school-card.tier-1 {
+  background: #FFFBEB;
+  border: 2px solid #F59E0B;
+}
+.school-card h4 {
+  color: #1E40AF;
+  margin-top: 0;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tier-badge {
+  font-size: 10px;
+  background: #F59E0B;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.school-card .meta {
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 6px;
+}
+.school-card .why {
+  font-size: 13px;
+  color: #374151;
+  margin-top: 6px;
+  font-style: italic;
+}
+.print-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  z-index: 1000;
+}
+.print-button:hover {
+  background: #1E40AF;
+}
+@media print {
+  body { padding: 20px; }
+  .print-button { display: none; }
+  h2 { page-break-after: avoid; }
+  .school-card { page-break-inside: avoid; }
+  .timeline-item { page-break-inside: avoid; }
+  .script-box { page-break-inside: avoid; }
+}
+.footer-meta {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 12px;
+  color: #9CA3AF;
+  text-align: center;
+}
+.kpi {
+  display: inline-block;
+  background: #DBEAFE;
+  color: #1E40AF;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.objection {
+  background: #F9FAFB;
+  border-left: 3px solid #9CA3AF;
+  padding: 10px 16px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+.objection strong {
+  color: #B45309;
+}
+.objection-response {
+  margin-top: 6px;
+  color: #047857;
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">📄 Imprimer / Télécharger en PDF</button>
+
+<h1>Guide de prospection EduPilot</h1>
+<p class="subtitle">Méthode complète pour vendre EduPilot aux écoles privées tunisiennes depuis la France</p>
+
+<div class="toc">
+<h3>Sommaire</h3>
+<ol>
+<li>Téléphonie internationale : appeler en Tunisie depuis la France</li>
+<li>Numéro virtuel tunisien (et marocain pour plus tard)</li>
+<li>Stratégie commerciale pas à pas</li>
+<li>Liste des 20 premières écoles à contacter</li>
+<li>Scripts WhatsApp prêts à envoyer (3 variantes)</li>
+<li>Script d'appel téléphonique</li>
+<li>Déroulé d'une démo en visio de 20 minutes</li>
+<li>Les 10 objections les plus probables et leurs réponses</li>
+<li>Planning d'exécution sur 30 jours</li>
+<li>Outils gratuits ou pas chers à utiliser</li>
+</ol>
+</div>
+
+<div class="intro">
+<strong>Ton objectif :</strong> signer ta première école tunisienne dans les 30 prochains jours. Tu travailles à distance depuis la France. Tu n'as pas de budget marketing. Tu utilises uniquement WhatsApp Business, un numéro virtuel tunisien, et la visio. Ce guide te donne tout pour y arriver.
+</div>
+
+<h2>1. Téléphonie internationale : appeler en Tunisie depuis la France</h2>
+
+<h3>Pourquoi tu as besoin d'un numéro tunisien virtuel</h3>
+<p>Un directeur d'école tunisien qui voit s'afficher un numéro <strong>+33 (français)</strong> sur son téléphone va se méfier ou ne pas décrocher. Beaucoup pensent que c'est du spam ou un démarchage français. Avec un numéro <strong>+216 (tunisien)</strong>, le taux de réponse est multiplié par 3 à 5.</p>
+
+<p>Le numéro virtuel te permet aussi de :</p>
+<ul>
+<li>Recevoir des appels entrants de Tunisie sans frais pour ton interlocuteur</li>
+<li>Avoir un numéro WhatsApp Business avec un indicatif tunisien crédible</li>
+<li>Séparer ton activité pro de ton numéro perso</li>
+<li>Appeler depuis ton ordinateur ou ton téléphone partout dans le monde</li>
+</ul>
+
+<h3>Les 4 meilleurs services pour obtenir un numéro tunisien virtuel</h3>
+
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Numéro +216 ?</th>
+<th>Prix mensuel</th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="priority-1">
+<td><strong>Telnyx</strong></td>
+<td>✅ Oui</td>
+<td>~1 €/mois + ~0,03 €/min</td>
+<td>Le plus pro, qualité audio top, intégration WhatsApp possible</td>
+<td>Configuration plus technique</td>
+</tr>
+<tr>
+<td><strong>CallHippo</strong></td>
+<td>✅ Oui</td>
+<td>~14 €/mois (forfait inclus)</td>
+<td>Très simple, app mobile, CRM intégré</td>
+<td>Plus cher</td>
+</tr>
+<tr>
+<td><strong>Skype Number</strong></td>
+<td>❌ Tunisie indisponible souvent</td>
+<td>~5-10 €/mois</td>
+<td>Connu, simple à utiliser</td>
+<td>Couverture limitée pour la Tunisie</td>
+</tr>
+<tr>
+<td><strong>Hushed</strong></td>
+<td>⚠️ Variable</td>
+<td>~5 €/mois</td>
+<td>Application mobile simple</td>
+<td>Pas toujours +216 disponible</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip-box">
+<h4>🎯 Ma recommandation : Telnyx</h4>
+<p>C'est le meilleur rapport qualité/prix pour la Tunisie. Inscription en ligne sur <strong>telnyx.com</strong>, vérification d'identité, achat d'un numéro tunisien (~1 €/mois), puis tu télécharges leur app mobile ou utilises leur softphone web. Tu peux passer/recevoir des appels et SMS depuis n'importe où.</p>
+</div>
+
+<h3>Solution alternative gratuite : WhatsApp Business avec numéro virtuel</h3>
+<p>Beaucoup de directeurs préfèrent WhatsApp à un appel direct. Voici comment configurer un compte WhatsApp Business avec un numéro tunisien :</p>
+<ol>
+<li>Achète d'abord un numéro tunisien sur Telnyx (~1 €/mois)</li>
+<li>Vérifie qu'il peut recevoir des SMS</li>
+<li>Télécharge <strong>WhatsApp Business</strong> sur ton téléphone (gratuit)</li>
+<li>Configure le compte avec ton numéro Telnyx tunisien</li>
+<li>Reçois le code de vérification SMS via Telnyx</li>
+<li>Active la vérification, ton WhatsApp Business est prêt avec un numéro +216</li>
+</ol>
+
+<div class="warning-box">
+<h4>⚠️ Vérifie les conditions Telnyx</h4>
+<p>Certains numéros virtuels ne peuvent pas être utilisés pour activer WhatsApp (vérification SMS bloquée). Demande à Telnyx au support avant d'acheter si "WhatsApp activation possible" sur leurs numéros tunisiens. Si non, prends un numéro chez <strong>SMSPVA</strong> ou <strong>5SIM</strong> juste pour la vérification initiale (coût unique 1-3 €).</p>
+</div>
+
+<h3>Pour le Maroc plus tard</h3>
+<p>Quand tu attaqueras le Maroc dans quelques semaines, exactement la même méthode mais avec un numéro <strong>+212</strong>. Telnyx propose les numéros marocains au même prix. Tu peux gérer plusieurs numéros simultanément depuis la même app.</p>
+
+<h2>2. Stratégie commerciale pas à pas</h2>
+
+<h3>Le funnel commercial complet</h3>
+<p>Voici le chemin par lequel ton prospect va passer, étape par étape :</p>
+
+<table>
+<thead>
+<tr>
+<th>Étape</th>
+<th>Canal</th>
+<th>Objectif</th>
+<th>Taux de conversion attendu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Prospection</td>
+<td>WhatsApp Business +216</td>
+<td>Obtenir une réponse</td>
+<td>20-30 % répondent</td>
+</tr>
+<tr>
+<td>2. Engagement</td>
+<td>Vidéo Loom 3 min</td>
+<td>Susciter intérêt</td>
+<td>50 % des répondants regardent</td>
+</tr>
+<tr>
+<td>3. RDV démo</td>
+<td>Visio Google Meet</td>
+<td>Présenter en direct</td>
+<td>40 % acceptent un RDV</td>
+</tr>
+<tr>
+<td>4. Démo</td>
+<td>Visio 20 min</td>
+<td>Convaincre techniquement</td>
+<td>50 % passent à l'essai</td>
+</tr>
+<tr>
+<td>5. Essai 30 jours</td>
+<td>Plateforme + onboarding</td>
+<td>Faire utiliser le produit</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6. Conversion</td>
+<td>Appel de closing</td>
+<td>Signer le contrat</td>
+<td>40-60 % paient à la fin</td>
+</tr>
+</tbody>
+</table>
+
+<div class="tip-box">
+<h4>📊 Math du funnel</h4>
+<p>Sur 20 écoles contactées par WhatsApp :</p>
+<ul>
+<li>~5 répondent</li>
+<li>~3 regardent la vidéo</li>
+<li>~2 acceptent une démo</li>
+<li>~1 passe à l'essai</li>
+<li><strong>~0,5 signe au final</strong></li>
+</ul>
+<p>Pour signer 1 école, tu dois donc contacter <strong>~30-40 écoles</strong>. C'est statistique, c'est normal, c'est comme ça que la vente B2B fonctionne.</p>
+</div>
+
+<h3>Les 6 principes de vente B2B au Maghreb</h3>
+
+<ol>
+<li><strong>WhatsApp avant tout.</strong> Email = ignoré 95 % du temps. Appel à froid = mal vu. WhatsApp = canal n°1 pour le B2B en Tunisie/Maroc.</li>
+<li><strong>Tu es un partenaire, pas un vendeur.</strong> Ne dis jamais "je vous vends". Dis "je propose un partenariat".</li>
+<li><strong>Le directeur veut être respecté.</strong> Vouvoiement strict. Salutations chaleureuses ("Bonjour Monsieur le Directeur" / "Bonjour Madame la Directrice").</li>
+<li><strong>La preuve sociale est reine.</strong> Dès que tu as 1 école qui utilise EduPilot, tu peux la mentionner partout. Cite le nom dès que c'est autorisé.</li>
+<li><strong>Le prix arrive en dernier.</strong> Tu ne donnes jamais le prix au premier message. Tu le donnes en visio, après avoir présenté la valeur.</li>
+<li><strong>L'urgence aide.</strong> "Programme Lancement Tunisie 2026 - 5 places" est une vraie levier. À utiliser avec sincérité.</li>
+</ol>
+
+<h2>3. Liste des 20 premières écoles tunisiennes à contacter</h2>
+
+<p>Cette liste est classée par ordre de priorité. Commence par le <strong>Tier 1</strong> (les 8 meilleures), puis enchaîne sur le <strong>Tier 2</strong>. Toutes ces écoles ont été qualifiées : primaire ou collège/lycée, taille intéressante, coordonnées vérifiées.</p>
+
+<h3>🥇 Tier 1 — Les 8 prospects à contacter en premier</h3>
+
+<div class="school-card tier-1">
+<h4>1. The Digital School <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Tunis · 📞 +216 51 606 051 · 🌐 thedigitalschool.fr</div>
+<div class="why">Le nom seul indique une mentalité digitale. Ils comprendront immédiatement la valeur d'EduPilot. Premier prospect logique absolu.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>2. École El Faouz <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Mégrine (Tunis) · 📞 +216 71 429 866 · 🌐 ecoleelfaouz.com · ⭐ 4.6/5</div>
+<div class="why">Avis Google montrent des plaintes parents sur le manque de communication = ton angle parfait. Mentionne ce point délicatement.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>3. Joyschool <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Sousse · 📞 +216 51 622 512 · 🌐 joyschool.tn</div>
+<div class="why">Site moderne, école préparatoire + primaire. Sousse = zone côtière à fort pouvoir d'achat. Prospect très ouvert à la nouveauté.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>4. École Chevreul <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Tunis · 📞 +216 71 796 196 · 🌐 ecoleprimairechevreul.tn · ⭐ 4.4/5</div>
+<div class="why">École privée bien notée, site web actif. Cible idéale taille moyenne.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>5. Marco Polo <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Tunis (Bardo) · 📞 +216 71 581 365 · ⭐ 4.6/5</div>
+<div class="why">École préparatoire reconnue, taille moyenne, bonne réputation.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>6. Da Vinci School <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 La Marsa (Tunis) · 📞 +216 71 740 151</div>
+<div class="why">La Marsa = quartier huppé de Tunis, parents exigeants et solvables. Le nom "Da Vinci" suggère une école qui valorise l'innovation.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>7. Groupe Scolaire Gustave Eiffel <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Bizerte · 📞 +216 99 202 044 · ⭐ 5/5</div>
+<div class="why">Note parfaite 5/5, "le meilleur collège" selon les avis. Multi-niveaux. Excellent prospect.</div>
+</div>
+
+<div class="school-card tier-1">
+<h4>8. Jules Verne <span class="tier-badge">TIER 1</span></h4>
+<div class="meta">📍 Bizerte · 📞 +216 97 211 782 · ⭐ 5/5</div>
+<div class="why">Collège + École privée. Note parfaite. Nom français = ouverture aux solutions occidentales.</div>
+</div>
+
+<h3>🥈 Tier 2 — Les 12 prospects suivants</h3>
+
+<div class="school-card">
+<h4>9. EL ALAMA</h4>
+<div class="meta">📍 Sahloul, Sousse · 📞 +216 73 820 128 · ⭐ 3.8/5</div>
+<div class="why">Quartier Sahloul = zone résidentielle aisée de Sousse.</div>
+</div>
+
+<div class="school-card">
+<h4>10. ELS Private School</h4>
+<div class="meta">📍 Sousse · 📞 +216 92 063 043</div>
+<div class="why">Campus universitaire, école active.</div>
+</div>
+
+<div class="school-card">
+<h4>11. School Les Lauréats Sahloul 4</h4>
+<div class="meta">📍 Sousse · 📞 +216 24 721 770</div>
+<div class="why">Horaires étendus 7h-19h = école active gérant beaucoup d'élèves.</div>
+</div>
+
+<div class="school-card">
+<h4>12. Primary School Nour El Maaref</h4>
+<div class="meta">📍 Sfax · 📞 +216 29 418 735</div>
+<div class="why">Primaire + secondaire à Sfax (2ème ville économique).</div>
+</div>
+
+<div class="school-card">
+<h4>13. Almanehel School</h4>
+<div class="meta">📍 Sfax · 📞 +216 50 663 462</div>
+<div class="why">École privée Sfax, taille moyenne.</div>
+</div>
+
+<div class="school-card">
+<h4>14. Preparatory School Essiddik Sfax</h4>
+<div class="meta">📍 Sfax · 📞 +216 51 770 779</div>
+<div class="why">École préparatoire, ouverte 9h/jour.</div>
+</div>
+
+<div class="school-card">
+<h4>15. Ariane School</h4>
+<div class="meta">📍 Ariana (Tunis) · 📞 +216 71 702 362 · ⭐ 4/5</div>
+<div class="why">Ariana = banlieue résidentielle haut-de-gamme de Tunis. Multi-niveaux.</div>
+</div>
+
+<div class="school-card">
+<h4>16. Abbasi Private School</h4>
+<div class="meta">📍 Ariana · 📞 +216 99 550 990</div>
+<div class="why">Horaires étendus 7h-18h30 = grosse école.</div>
+</div>
+
+<div class="school-card">
+<h4>17. Bloom (La Marsa)</h4>
+<div class="meta">📍 La Marsa · 📞 +216 51 922 073 · ⭐ 5/5</div>
+<div class="why">Note parfaite. Parents internationaux, classe aisée.</div>
+</div>
+
+<div class="school-card">
+<h4>18. EL IRTIKA Bouabdallah</h4>
+<div class="meta">📍 La Marsa · 📞 +216 97 979 744</div>
+<div class="why">École primaire La Marsa, horaires étendus.</div>
+</div>
+
+<div class="school-card">
+<h4>19. École Privée El Manahel</h4>
+<div class="meta">📍 Nabeul · 📞 +216 72 230 913</div>
+<div class="why">Nabeul = ville côtière touristique avec parents solvables.</div>
+</div>
+
+<div class="school-card">
+<h4>20. Private School L'idéale</h4>
+<div class="meta">📍 Nabeul · 📞 +216 72 365 955 · ⭐ 4.3/5</div>
+<div class="why">Bien notée, ouverture à innovation pédagogique.</div>
+</div>
+
+<h2>4. Scripts WhatsApp prêts à envoyer (3 variantes)</h2>
+
+<h3>Variante A — École moderne / digital-friendly</h3>
+<p><strong>Pour qui :</strong> The Digital School, Joyschool, Da Vinci School, Bloom, Marco Polo</p>
+
+<div class="script-box">
+<strong>Bonjour Madame/Monsieur le Directeur,</strong><br><br>
+Je suis [Prénom], développeur d'<strong>EduPilot</strong>, une plateforme de gestion scolaire moderne (équivalent Pronote) conçue pour les écoles privées du Maghreb.<br><br>
+Notes, bulletins, présences, communication parents et emplois du temps — tout en un seul outil, en français, accessible depuis mobile.<br><br>
+Nous lançons EduPilot en Tunisie ce mois-ci avec un <strong>programme Lancement</strong> : les 5 premières écoles bénéficient de -40% à vie sur leur abonnement, plus 30 jours d'essai gratuit.<br><br>
+Voici une démo de 3 minutes : [lien Loom]<br><br>
+Auriez-vous 20 minutes cette semaine pour une présentation personnalisée à votre école ?<br><br>
+Bien cordialement,<br>
+[Ton nom]<br>
++216 [ton numéro virtuel]
+</div>
+
+<h3>Variante B — École classique / traditionnelle</h3>
+<p><strong>Pour qui :</strong> Chevreul, Gustave Eiffel, Jules Verne, EL ALAMA, Ariane School</p>
+
+<div class="script-box">
+<strong>Bonjour Madame/Monsieur le Directeur,</strong><br><br>
+Je me permets de vous contacter au sujet d'<strong>EduPilot</strong>, une plateforme de gestion scolaire que nous mettons à disposition des écoles privées tunisiennes.<br><br>
+L'objectif est simple : remplacer les SMS, papiers et appels téléphoniques par un outil unique et sécurisé pour la gestion des notes, présences et communication avec les parents.<br><br>
+Nous accompagnons chaque école avec une formation complète et un support disponible toute l'année. Le tarif débute à 199 TND/mois.<br><br>
+Une courte démo de 3 minutes : [lien Loom]<br><br>
+Si cela vous intéresse, je vous propose un appel de 20 minutes à votre convenance cette semaine ou la suivante.<br><br>
+Avec mes salutations respectueuses,<br>
+[Ton nom]<br>
++216 [ton numéro virtuel]
+</div>
+
+<h3>Variante C — École avec problème évident</h3>
+<p><strong>Pour qui :</strong> spécifiquement El Faouz (les avis Google montrent des plaintes sur la communication)</p>
+
+<div class="script-box">
+<strong>Bonjour Madame/Monsieur le Directeur,</strong><br><br>
+Je suis [Prénom], fondateur d'<strong>EduPilot</strong>, une plateforme dédiée à la communication école-parents.<br><br>
+Beaucoup de directeurs nous disent perdre énormément de temps à répondre aux parents qui demandent les notes, absences ou devoirs de leur enfant. EduPilot résout exactement ça : les parents consultent en temps réel depuis leur téléphone, et l'école se libère 8 à 10 heures par semaine.<br><br>
+Notre programme de lancement Tunisie 2026 inclut -40% à vie pour les 5 premières écoles partenaires + 30 jours gratuits pour tester.<br><br>
+Démo de 3 min : [lien Loom]<br><br>
+Disponible cette semaine pour 20 minutes en visio si vous le souhaitez.<br><br>
+Cordialement,<br>
+[Ton nom]
+</div>
+
+<h3>Message de relance (J+4 si pas de réponse)</h3>
+<div class="script-box">
+<strong>Bonjour,</strong><br><br>
+Je me permets de revenir vers vous concernant ma proposition EduPilot.<br><br>
+Avez-vous eu le temps de regarder la vidéo de présentation ?<br><br>
+Je suis disponible si vous avez la moindre question.<br><br>
+Cordialement,<br>
+[Ton nom]
+</div>
+
+<div class="warning-box">
+<h4>⚠️ Règles à respecter avec WhatsApp Business</h4>
+<ul>
+<li>Maximum <strong>5-7 messages par jour</strong> depuis le même numéro</li>
+<li>Envoie entre <strong>9h-11h ou 14h-16h</strong> heure de Tunis (jamais en soirée, jamais le vendredi après-midi)</li>
+<li>Si pas de réponse à <strong>J+10</strong>, abandonne ce prospect (relance plus tard dans 2-3 mois)</li>
+<li>Personnalise toujours le prénom du destinataire si possible</li>
+</ul>
+</div>
+
+<h2>5. Script d'appel téléphonique (au cas où WhatsApp ne suffit pas)</h2>
+
+<p>Si après 2 messages WhatsApp tu n'as pas de réponse et que l'école est en Tier 1, tu peux passer un appel direct depuis ton numéro virtuel +216.</p>
+
+<h3>Script d'appel (durée cible : 2-3 minutes)</h3>
+
+<div class="script-box">
+<strong>[Standard décroche]</strong><br><br>
+"Bonjour, [Nom de l'école] ?<br><br>
+Bonjour Madame/Monsieur. Je suis [Prénom], je vous appelle au sujet d'un projet qui pourrait intéresser votre direction. Pourrais-je parler à <strong>Madame/Monsieur le Directeur</strong> s'il vous plaît ?"<br><br>
+<em>[Si on te demande pour quoi]</em><br><br>
+"C'est concernant une plateforme de gestion scolaire que nous proposons aux écoles privées tunisiennes. J'ai déjà envoyé une présentation par WhatsApp, je voulais juste vérifier que ma proposition est bien arrivée."<br><br>
+<em>[Si on te passe le directeur]</em><br><br>
+"Bonjour Madame/Monsieur le Directeur, merci de prendre mon appel.<br><br>
+Je suis [Prénom], développeur d'EduPilot, une plateforme de gestion scolaire moderne pour les écoles privées du Maghreb.<br><br>
+Je vous appelle parce que beaucoup de directeurs en Tunisie nous disent perdre 8 à 10 heures par semaine à gérer les communications avec les parents par SMS, papier et téléphone. EduPilot remplace tout ça par un seul outil simple.<br><br>
+Plutôt que je vous explique au téléphone, est-ce que vous auriez 20 minutes cette semaine ou la prochaine pour que je vous montre la plateforme en visio ? Vous verriez concrètement comment ça fonctionne.<br><br>
+Quel jour vous arrangerait le mieux ?"
+</div>
+
+<div class="tip-box">
+<h4>🎯 Conseils pour l'appel</h4>
+<ul>
+<li><strong>Souriez en parlant</strong> : ça s'entend dans la voix</li>
+<li><strong>Parlez lentement</strong> : tu es français, ralentis pour que ça soit fluide</li>
+<li><strong>Ne réponds pas aux questions techniques au téléphone</strong> : redirige vers la démo ("Je préfère vous le montrer en visio, c'est plus parlant")</li>
+<li><strong>Clôture toujours sur un RDV</strong> : pas "je vais réfléchir", mais "mardi 14h ou jeudi 10h ?"</li>
+</ul>
+</div>
+
+<h2>6. Déroulé d'une démo en visio de 20 minutes</h2>
+
+<p>La démo est <strong>la phase critique</strong>. Si tu rates la démo, tu perds le client. Voici le déroulé minute par minute.</p>
+
+<div class="timeline-item">
+<h4>Minutes 0-2 : accueil et contexte</h4>
+<ul>
+<li>Sourire, "Bonjour Madame/Monsieur, merci de m'accorder ce temps"</li>
+<li>Vérifier qu'ils te voient et t'entendent bien</li>
+<li>Demander : "Pour personnaliser au mieux ma présentation, pouvez-vous me dire combien d'élèves vous gérez et comment vous communiquez actuellement avec les parents ?"</li>
+<li>Écouter activement, prendre des notes</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h4>Minutes 2-5 : présentation du problème (avant ton produit)</h4>
+<ul>
+<li>"Si je résume ce que vous me décrivez : vous perdez environ X heures par semaine à... [reformuler leur problème]"</li>
+<li>"C'est exactement ce que nous résolvons avec EduPilot"</li>
+<li>Partage d'écran : démarre sur une fausse école avec des données qui ressemblent à la leur</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h4>Minutes 5-13 : démonstration des 4 fonctions clés</h4>
+<ol>
+<li><strong>Connexion parent</strong> (2 min) : montre comment un parent voit les notes, devoirs, absences en temps réel sur mobile</li>
+<li><strong>Saisie de notes</strong> (2 min) : montre comme c'est rapide pour un prof</li>
+<li><strong>Présences</strong> (2 min) : la liste cochée en classe + alerte SMS auto aux parents en cas d'absence</li>
+<li><strong>Dashboard directeur</strong> (2 min) : la vue globale de l'école en temps réel</li>
+</ol>
+</div>
+
+<div class="timeline-item">
+<h4>Minutes 13-15 : sécurité et déploiement</h4>
+<ul>
+<li>"Vos données sont hébergées en Europe, conformes RGPD, sauvegardées chaque nuit"</li>
+<li>"L'installation prend 1 jour. La formation de votre équipe prend 3 heures. Tout est inclus dans l'abonnement."</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h4>Minutes 15-18 : tarification (le moment vérité)</h4>
+<ul>
+<li>"Nos plans sont simples : Starter à 199 TND/mois pour les petites écoles, Pro à 399 TND/mois pour les écoles moyennes, Premium à 799 TND/mois pour les groupes scolaires."</li>
+<li>"Toutes les fonctionnalités sont incluses dans tous les plans. La seule différence est le nombre d'élèves et de parents que vous pouvez gérer."</li>
+<li>"Pour vous, vu votre taille, le plan adapté serait [Pro] à 399 TND/mois."</li>
+<li>"Et puisque vous êtes dans les 5 premières écoles tunisiennes que je signe, je vous propose le programme Lancement : -40% à vie, soit 239 TND/mois au lieu de 399."</li>
+<li>"Plus 30 jours d'essai gratuit avant la première facturation."</li>
+</ul>
+</div>
+
+<div class="timeline-item">
+<h4>Minutes 18-20 : closing et prochaines étapes</h4>
+<ul>
+<li>"Avez-vous des questions ?"</li>
+<li>Réponds aux questions courtes (sinon "On peut en reparler par email/WhatsApp")</li>
+<li><strong>Tu poses LA question fermée :</strong> "Pour démarrer l'essai gratuit la semaine prochaine, j'ai besoin de votre logo et de la liste de vos classes. Pouvez-vous me les envoyer demain ?"</li>
+<li>Si oui : tu envoies un récap par email + WhatsApp dans la foulée</li>
+<li>Si "je dois en parler à mon équipe" : tu fixes un 2ème RDV à J+7 maximum</li>
+</ul>
+</div>
+
+<h2>7. Les 10 objections les plus probables et leurs réponses</h2>
+
+<div class="objection">
+<strong>1. "C'est trop cher pour notre école."</strong>
+<div class="objection-response">→ "Je comprends. Notre plan Starter à 199 TND/mois revient à environ 7 TND/jour. C'est moins cher qu'un café premium par jour pour gérer tout votre établissement. Et le programme Lancement à 119 TND/mois c'est encore plus accessible. Voulez-vous qu'on commence par Starter pour tester ?"</div>
+</div>
+
+<div class="objection">
+<strong>2. "Nos profs ne sont pas à l'aise avec l'informatique."</strong>
+<div class="objection-response">→ "C'est exactement pour ça qu'EduPilot a été conçu : interface ultra-simple, formation incluse de 3 heures pour toute l'équipe, et support WhatsApp disponible. Une de mes écoles a 60 ans de moyenne d'âge dans son équipe et tout le monde s'y est mis en 1 semaine."</div>
+</div>
+
+<div class="objection">
+<strong>3. "Nous utilisons déjà Excel et WhatsApp, ça nous suffit."</strong>
+<div class="objection-response">→ "Excel + WhatsApp marche au début, mais quand vous dépassez 100 élèves vous perdez le contrôle. Combien de temps passe votre secrétaire à ressaisir les notes pour chaque trimestre ? EduPilot lui économise cette tâche entièrement."</div>
+</div>
+
+<div class="objection">
+<strong>4. "Et si je veux arrêter, comment je récupère mes données ?"</strong>
+<div class="objection-response">→ "Vous pouvez exporter toutes vos données à tout moment (Excel, PDF, JSON). Si vous arrêtez, on vous donne un export complet et on supprime tout chez nous. Vos données vous appartiennent à 100%."</div>
+</div>
+
+<div class="objection">
+<strong>5. "Mes parents ne savent pas utiliser une application mobile."</strong>
+<div class="objection-response">→ "Si vos parents utilisent WhatsApp, ils peuvent utiliser EduPilot — c'est exactement le même niveau de simplicité. Et nous fournissons un mode d'emploi PDF que vous pouvez distribuer à la rentrée."</div>
+</div>
+
+<div class="objection">
+<strong>6. "Vos serveurs sont en Europe, est-ce que c'est légal ?"</strong>
+<div class="objection-response">→ "Oui, totalement légal. Nos serveurs sont conformes au standard européen RGPD qui est plus strict que la loi tunisienne. Beaucoup d'écoles internationales en Tunisie utilisent des solutions cloud européennes ou américaines."</div>
+</div>
+
+<div class="objection">
+<strong>7. "Vous êtes une nouvelle entreprise, comment savoir que vous serez là dans 2 ans ?"</strong>
+<div class="objection-response">→ "Question très juste. C'est pour ça que toutes vos données sont exportables à tout moment, et que nous proposons un essai de 30 jours sans engagement. Si jamais on disparaissait, vous récupérez 100% de vos données. En attendant, nos premiers clients utilisent EduPilot avec satisfaction."</div>
+</div>
+
+<div class="objection">
+<strong>8. "Je dois en parler à mon mari/associé/comité."</strong>
+<div class="objection-response">→ "Bien sûr. Pour faciliter cette discussion, je vous envoie aujourd'hui un PDF récapitulatif que vous pourrez leur partager. On se rappelle vendredi en fin de journée ? Ça vous laisse le temps d'en parler avec eux."</div>
+</div>
+
+<div class="objection">
+<strong>9. "Pourquoi un Français/étranger plutôt qu'une solution locale ?"</strong>
+<div class="objection-response">→ "EduPilot est conçu spécifiquement pour le Maghreb : calendrier scolaire local, devises locales (TND, DZD, MAD), interface en français et arabe, support en français. Nous comprenons les spécificités locales mieux que les solutions purement européennes."</div>
+</div>
+
+<div class="objection">
+<strong>10. "Je vais réfléchir, je vous tiens au courant."</strong>
+<div class="objection-response">→ "Bien sûr. Pour vous aider à décider, j'ai 2 propositions : soit on planifie un 2ème RDV dans 7 jours pour répondre à vos questions après votre réflexion, soit je vous active l'essai gratuit dès maintenant — vous testez 30 jours sans engagement, si vous n'êtes pas convaincu, on n'en parle plus. Que préférez-vous ?"</div>
+</div>
+
+<h2>8. Planning d'exécution sur 30 jours</h2>
+
+<h3>Semaine 1 — Préparation (5-8h de travail)</h3>
+<ul class="checklist">
+<li>Acheter un numéro virtuel +216 sur Telnyx (~1 €)</li>
+<li>Configurer WhatsApp Business avec ce numéro</li>
+<li>Modifier infrasalama.com : retirer mentions Algérie, ajouter mentions Maghreb/Tunisie</li>
+<li>Enregistrer la vidéo Loom de présentation (3 minutes)</li>
+<li>Préparer "fausses écoles tunisiennes" dans la démo (noms locaux, calendrier sept-juin, TND)</li>
+<li>Rechercher les noms des directeurs sur LinkedIn pour les 8 écoles Tier 1</li>
+<li>Tester un appel via Telnyx pour vérifier la qualité audio</li>
+</ul>
+
+<h3>Semaine 2 — Premier contact massif</h3>
+<ul class="checklist">
+<li>Lundi : envoyer 4 messages WhatsApp aux 4 prospects Tier 1 prioritaires</li>
+<li>Mardi : envoyer 4 messages aux 4 autres Tier 1</li>
+<li>Mercredi : envoyer 4 messages aux 4 premiers Tier 2</li>
+<li>Jeudi : envoyer 4 messages aux 4 suivants Tier 2</li>
+<li>Vendredi : relances J+4 pour ceux qui n'ont pas répondu</li>
+<li>Suivre attentivement les retours et planifier les démos</li>
+</ul>
+
+<h3>Semaine 3 — Démos en visio</h3>
+<ul class="checklist">
+<li>Faire 4 à 6 démos avec les écoles intéressées</li>
+<li>Pour chaque démo : préparer une "fausse école à leur nom" 30 min avant</li>
+<li>Envoyer un email de récap après chaque démo + activer l'essai gratuit</li>
+<li>Reprendre contact avec ceux n'ayant pas encore répondu (4 derniers Tier 2)</li>
+</ul>
+
+<h3>Semaine 4 — Closing et premières signatures</h3>
+<ul class="checklist">
+<li>Suivre les écoles en essai : appeler tous les 5 jours pour les aider</li>
+<li>Closer (= obtenir signature/paiement) au moins 1 école</li>
+<li>Demander un témoignage vidéo dès qu'une école utilise EduPilot</li>
+<li>Préparer le pivot vers le Maroc en parallèle (création auto-entreprise française)</li>
+</ul>
+
+<div class="tip-box">
+<h4>📊 Objectifs réalistes à 30 jours</h4>
+<ul>
+<li>20 écoles contactées</li>
+<li>5-6 réponses positives</li>
+<li>3-4 démos réalisées</li>
+<li>1-2 écoles en essai gratuit</li>
+<li><strong>1 école signée payante</strong> (Pro Early Adopter à 239 TND/mois ≈ 69 €/mois)</li>
+</ul>
+<p>1 école signée = 540 €/an de CA récurrent. Ce n'est pas grand-chose, mais c'est ta <strong>première preuve</strong>. Avec 1 témoignage en main, le taux de conversion sur la 2ème vague double automatiquement.</p>
+</div>
+
+<h2>9. Outils gratuits ou pas chers à utiliser</h2>
+
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Usage</th>
+<th>Prix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Telnyx</strong></td>
+<td>Numéro virtuel +216 + appels</td>
+<td>~1 €/mois + 0,03 €/min</td>
+</tr>
+<tr>
+<td><strong>WhatsApp Business</strong></td>
+<td>Prospection principale</td>
+<td>Gratuit</td>
+</tr>
+<tr>
+<td><strong>Loom</strong></td>
+<td>Vidéo de démo 3 min</td>
+<td>Gratuit (jusqu'à 25 vidéos)</td>
+</tr>
+<tr>
+<td><strong>Google Meet</strong></td>
+<td>Démos en visio</td>
+<td>Gratuit</td>
+</tr>
+<tr>
+<td><strong>Calendly</strong></td>
+<td>Prise de RDV automatique</td>
+<td>Gratuit (1 lien)</td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>Suivi pipeline commercial (CRM)</td>
+<td>Gratuit (perso)</td>
+</tr>
+<tr>
+<td><strong>LinkedIn Sales Navigator</strong></td>
+<td>Trouver les noms des directeurs</td>
+<td>Essai gratuit 1 mois</td>
+</tr>
+<tr>
+<td><strong>Canva</strong></td>
+<td>Visuels marketing</td>
+<td>Gratuit</td>
+</tr>
+<tr>
+<td><strong>Stripe ou Wise</strong></td>
+<td>Encaisser les paiements EUR</td>
+<td>Gratuit ouverture, ~1,4 % par transaction</td>
+</tr>
+<tr>
+<td><strong>Mailerlite</strong></td>
+<td>Email transactionnel</td>
+<td>Gratuit (1000 contacts)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Le mini-CRM Notion : template à recréer</h3>
+<p>Crée une base de données Notion avec ces colonnes pour suivre tes 20 prospects :</p>
+
+<div class="code-block">
+| École | Ville | Téléphone | Statut | Date contact | Date relance | Notes |
+| Digital School | Tunis | +216... | À contacter | 28/04/26 | 02/05/26 | Tier 1 |
+| El Faouz | Mégrine | +216... | Contacté | 28/04/26 | 02/05/26 | Pas répondu |
+| Joyschool | Sousse | +216... | RDV planifié | 28/04/26 | RDV 03/05/26 | Très intéressée |
+...
+</div>
+
+<p>Statuts possibles : <strong>À contacter → Contacté → Répondu → RDV planifié → Démo faite → En essai → Signé / Refusé</strong></p>
+
+<div class="danger-box">
+<h4>🚫 À ne SURTOUT pas faire</h4>
+<ul>
+<li><strong>Ne pas envoyer 50 messages WhatsApp en 1 jour</strong> : tu te fais bannir par WhatsApp</li>
+<li><strong>Ne pas appeler le vendredi après-midi ou le week-end</strong> en Tunisie (jour religieux/familial)</li>
+<li><strong>Ne pas mentionner l'Algérie</strong> dans tes échanges avec les écoles tunisiennes (la plupart des Tunisiens n'ont pas de problème, mais ce n'est pas un argument de vente non plus)</li>
+<li><strong>Ne pas négocier le prix au premier message</strong> : tu te dévalorises</li>
+<li><strong>Ne pas faire la démo sur ton produit en mode "vrai" sans préparation</strong> : crée toujours une fausse école à leur nom avant le RDV</li>
+<li><strong>Ne pas oublier de relancer</strong> : 80 % des ventes B2B se font après la 5ème relance</li>
+</ul>
+</div>
+
+<h2>10. Récapitulatif : le bon ordre des choses</h2>
+
+<ol>
+<li>Cette semaine : <strong>numéro virtuel + WhatsApp Business + vidéo Loom + adapter le site</strong></li>
+<li>Semaine 2 : <strong>contacter les 20 écoles</strong> selon les variantes adaptées</li>
+<li>Semaine 3 : <strong>réaliser 4-6 démos</strong> en visio</li>
+<li>Semaine 4 : <strong>closer 1 première école</strong> en payant</li>
+<li>Mois 2 : <strong>obtenir le témoignage vidéo</strong> de cette première école</li>
+<li>Mois 2-3 : <strong>répliquer la méthode</strong> avec 30-50 nouvelles écoles tunisiennes</li>
+<li>Mois 3 : <strong>créer l'auto-entreprise française</strong> et lancer EduPilot.app pour le Maroc</li>
+</ol>
+
+<p>À la fin de ces 3 mois, tu devrais avoir <strong>3-5 écoles tunisiennes signées</strong>, <strong>1-2 témoignages</strong>, et tu seras prêt à attaquer le Maroc avec une crédibilité énorme.</p>
+
+<div class="footer-meta">
+EduPilot · Document généré le 26 avril 2026 · Pour ton usage personnel<br>
+Pour télécharger en PDF : utilisez le bouton "Imprimer" et choisissez "Enregistrer en PDF" comme destination
+</div>
+
+</body>
+</html>

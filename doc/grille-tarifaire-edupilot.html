@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Grille tarifaire EduPilot — Tunisie, Algérie, Maroc</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1F2937;
+  line-height: 1.6;
+  padding: 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 8px;
+  border-bottom: 3px solid #2563EB;
+  padding-bottom: 12px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: #1E40AF;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+.subtitle {
+  font-size: 15px;
+  color: #6B7280;
+  margin-bottom: 28px;
+}
+.intro {
+  background: #EFF6FF;
+  border-left: 4px solid #2563EB;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.country-section {
+  margin-bottom: 36px;
+  page-break-inside: avoid;
+}
+.flag-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #1F2937;
+  background: #F3F4F6;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.flag {
+  font-size: 28px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+th {
+  background: #2563EB;
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 500;
+}
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #E5E7EB;
+}
+tr:nth-child(even) td {
+  background: #F9FAFB;
+}
+.plan-pro {
+  background: #FEF3C7 !important;
+}
+.plan-pro td {
+  font-weight: 500;
+}
+.price-big {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1E40AF;
+}
+.price-eur {
+  color: #059669;
+  font-weight: 500;
+  font-size: 13px;
+}
+.note {
+  font-size: 13px;
+  color: #6B7280;
+  font-style: italic;
+  margin-top: 6px;
+}
+.early-adopter {
+  background: #FFFBEB;
+  border: 2px solid #F59E0B;
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin: 24px 0;
+}
+.early-adopter h3 {
+  color: #B45309;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.included-features {
+  background: #ECFDF5;
+  border-left: 4px solid #10B981;
+  padding: 16px 22px;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+.included-features h3 {
+  color: #047857;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.included-features ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+}
+.included-features li {
+  font-size: 14px;
+  padding: 4px 0;
+}
+.included-features li::before {
+  content: "✓";
+  color: #10B981;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.scenarios {
+  margin-top: 30px;
+  page-break-before: auto;
+}
+.scenario-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.scenario-title {
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.total-revenue {
+  font-size: 17px;
+  font-weight: 600;
+  color: #059669;
+  margin-top: 8px;
+}
+.success {
+  background: #D1FAE5;
+  color: #047857;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.print-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  z-index: 1000;
+}
+.print-button:hover {
+  background: #1E40AF;
+}
+@media print {
+  body { padding: 20px; }
+  .print-button { display: none; }
+  h2 { page-break-after: avoid; }
+  .country-section { page-break-inside: avoid; }
+  .scenario-card { page-break-inside: avoid; }
+}
+.footer-meta {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 12px;
+  color: #9CA3AF;
+  text-align: center;
+}
+.toc {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 16px 22px;
+  margin-bottom: 28px;
+}
+.toc h3 {
+  margin-top: 0;
+  color: #374151;
+}
+.toc ol {
+  margin-left: 18px;
+  font-size: 14px;
+}
+.toc li {
+  padding: 3px 0;
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">📄 Imprimer / Télécharger en PDF</button>
+
+<h1>Grille tarifaire EduPilot</h1>
+<p class="subtitle">Solution de gestion scolaire pour écoles privées du Maghreb · Tunisie · Algérie · Maroc</p>
+
+<div class="toc">
+<h3>Sommaire</h3>
+<ol>
+<li>Principe tarifaire simplifié</li>
+<li>Tarifs par pays (TND, DZD, MAD)</li>
+<li>Équivalents en euros</li>
+<li>Tarif Early Adopter (-40 %)</li>
+<li>Fonctionnalités incluses dans tous les plans</li>
+<li>Scénarios de revenus prévisionnels</li>
+<li>Comparaison avec le marché européen</li>
+</ol>
+</div>
+
+<div class="intro">
+<strong>Principe tarifaire simplifié :</strong> toutes les fonctionnalités sont incluses dans tous les plans. La seule différence entre Starter, Pro et Premium est le <strong>nombre maximum d'élèves et de comptes parents</strong> que l'école peut gérer. C'est plus simple à vendre et plus flexible pour le client.
+</div>
+
+<h2>1. Tunisie — tarifs en TND</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇹🇳</span>
+<span>République Tunisienne · 1 EUR ≈ 3,46 TND</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">199 TND</span><br><span class="price-eur">≈ 58 €</span></td>
+<td>1 990 TND/an<br><span class="price-eur">≈ 575 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">399 TND</span><br><span class="price-eur">≈ 115 €</span></td>
+<td>3 990 TND/an<br><span class="price-eur">≈ 1 153 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">799 TND</span><br><span class="price-eur">≈ 231 €</span></td>
+<td>7 990 TND/an<br><span class="price-eur">≈ 2 309 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>2. Algérie — tarifs en DZD</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇩🇿</span>
+<span>République Algérienne · 1 EUR ≈ 151 DZD</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">8 500 DZD</span><br><span class="price-eur">≈ 56 €</span></td>
+<td>85 000 DZD/an<br><span class="price-eur">≈ 563 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">17 000 DZD</span><br><span class="price-eur">≈ 113 €</span></td>
+<td>170 000 DZD/an<br><span class="price-eur">≈ 1 126 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">34 000 DZD</span><br><span class="price-eur">≈ 225 €</span></td>
+<td>340 000 DZD/an<br><span class="price-eur">≈ 2 252 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>3. Maroc — tarifs en MAD</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇲🇦</span>
+<span>Royaume du Maroc · 1 EUR ≈ 10,57 MAD</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">599 MAD</span><br><span class="price-eur">≈ 57 €</span></td>
+<td>5 990 MAD/an<br><span class="price-eur">≈ 567 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">1 199 MAD</span><br><span class="price-eur">≈ 113 €</span></td>
+<td>11 990 MAD/an<br><span class="price-eur">≈ 1 134 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">2 399 MAD</span><br><span class="price-eur">≈ 227 €</span></td>
+<td>23 990 MAD/an<br><span class="price-eur">≈ 2 269 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="early-adopter">
+<h3>🎯 Programme Lancement 2026 (Early Adopter -40 % à vie)</h3>
+<p style="margin-bottom: 12px;">Pour les <strong>5 premières écoles</strong> de chaque pays qui signent un abonnement annuel, EduPilot offre une réduction de <strong>-40 % à vie</strong> sur le tarif mensuel. Cette offre est limitée et conçue pour fidéliser tes premiers ambassadeurs.</p>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>🇹🇳 Tunisie</th>
+<th>🇩🇿 Algérie</th>
+<th>🇲🇦 Maroc</th>
+<th>Équivalent EUR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter EA</strong></td>
+<td>119 TND/mois</td>
+<td>5 100 DZD/mois</td>
+<td>359 MAD/mois</td>
+<td>≈ 35 €</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro EA ⭐</strong></td>
+<td>239 TND/mois</td>
+<td>10 200 DZD/mois</td>
+<td>719 MAD/mois</td>
+<td>≈ 69 €</td>
+</tr>
+<tr>
+<td><strong>Premium EA</strong></td>
+<td>479 TND/mois</td>
+<td>20 400 DZD/mois</td>
+<td>1 439 MAD/mois</td>
+<td>≈ 139 €</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="included-features">
+<h3>✅ Inclus dans TOUS les plans (Starter, Pro, Premium)</h3>
+<ul>
+<li>Gestion des notes et bulletins</li>
+<li>Suivi des présences et retards</li>
+<li>Messagerie école-parents</li>
+<li>Emplois du temps automatisés</li>
+<li>Suivi paiement scolarité</li>
+<li>Dashboards directeur en temps réel</li>
+<li>Branding personnalisé (logo + couleurs)</li>
+<li>Application mobile parents (iOS + Android)</li>
+<li>Support par WhatsApp et email</li>
+<li>Onboarding et formation inclus</li>
+<li>Sauvegardes quotidiennes</li>
+<li>Conformité RGPD et sécurité</li>
+</ul>
+</div>
+
+<h2 class="scenarios">4. Scénarios de revenus prévisionnels (en EUR)</h2>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 1 — Démarrage (mois 3)</div>
+<p>5 écoles signées en Pro Early Adopter</p>
+<p>5 × 45 € = <span class="total-revenue">225 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 2 — Croissance (mois 6)</div>
+<p>10 écoles : 8 Pro Early Adopter + 2 Pro plein tarif</p>
+<p>(8 × 69 €) + (2 × 115 €) = <span class="total-revenue">782 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 3 — Année 1 (mois 12)</div>
+<p>18 écoles signées sur Tunisie + Maroc, mix réaliste de plans</p>
+<p>≈ <span class="total-revenue">1 175 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🎯 Scénario 4 — Objectif minimum (mois 18-24)</div>
+<p>30 écoles signées : 25 Pro plein tarif + 5 Premium plein tarif</p>
+<p>(25 × 115 €) + (5 × 231 €) = <span class="total-revenue">4 030 €/mois récurrent</span></p>
+<div class="success">✅ Objectif minimum 2 500 €/mois atteint</div>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🎯 Scénario 5 — Objectif intermédiaire (mois 30+)</div>
+<p>60 écoles signées : 50 Pro plein tarif + 10 Premium plein tarif</p>
+<p>(50 × 115 €) + (10 × 231 €) = <span class="total-revenue">8 060 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🚀 Scénario 6 — Indépendance financière (mois 36+)</div>
+<p>143 écoles signées (~1,2 % du marché privé du Maghreb)</p>
+<p>ARPU moyen 107 € × 94 écoles = <span class="total-revenue">~10 000 €/mois récurrent</span></p>
+</div>
+
+<h2>5. Positionnement vs concurrence européenne</h2>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Prix typique</th>
+<th>Modèle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pronote (France)</td>
+<td>200-1 500 €/an</td>
+<td>Licence perpétuelle</td>
+</tr>
+<tr>
+<td>Educartable</td>
+<td>200-800 €/an</td>
+<td>Abonnement</td>
+</tr>
+<tr>
+<td>Klassroom Pro</td>
+<td>100-500 €/mois</td>
+<td>Abonnement</td>
+</tr>
+<tr>
+<td>Toutemonannee</td>
+<td>300-1 000 €/an</td>
+<td>Abonnement</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>EduPilot Pro</strong></td>
+<td><strong>~115 €/mois (~1 380 €/an)</strong></td>
+<td><strong>Abonnement SaaS</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="note" style="margin-top: 14px;">EduPilot se positionne en milieu de marché : suffisamment cher pour signaler la qualité, suffisamment accessible pour les écoles maghrébines aux budgets plus serrés.</p>
+
+<h2>6. Conseils de positionnement commercial</h2>
+<ul style="margin-left: 20px; margin-top: 12px;">
+<li style="margin-bottom: 10px;"><strong>Ne mentionne JAMAIS l'EUR</strong> à un directeur tunisien, algérien ou marocain. Ils raisonnent dans leur devise locale.</li>
+<li style="margin-bottom: 10px;"><strong>Mets toujours le Pro en avant</strong> : c'est le plan que 80 % des écoles vont choisir.</li>
+<li style="margin-bottom: 10px;"><strong>L'Early Adopter est ta meilleure arme</strong> : crée l'urgence en disant "il ne reste que 3 places".</li>
+<li style="margin-bottom: 10px;"><strong>Pousse l'annuel</strong> : "2 mois offerts" = cash-flow stable et engagement long.</li>
+<li style="margin-bottom: 10px;"><strong>L'EUR sert uniquement</strong> à tes calculs perso, ton reporting, tes prospects européens éventuels.</li>
+</ul>
+
+<div class="footer-meta">
+EduPilot · Document généré le 26 avril 2026 · Tarifs susceptibles d'évoluer selon le marché<br>
+Pour télécharger en PDF : utilisez le bouton "Imprimer" et choisissez "Enregistrer en PDF" comme destination
+</div>
+
+</body>
+</html>
