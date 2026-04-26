@@ -1,6 +1,6 @@
 <?php
 /**
- * EduPilot — send-contact.php
+ * Sahliya — send-contact.php
  * Handles the general contact form submission.
  */
 
@@ -114,9 +114,9 @@ $sujetLabels = [
 ];
 
 $sujetLabel = $sujetLabels[$sujet] ?? $sujet;
-$subject = "[EduPilot] {$sujetLabel} — {$prenom} {$nom}";
+$subject = "[Sahliya] {$sujetLabel} — {$prenom} {$nom}";
 
-$body  = "=== MESSAGE CONTACT EDUPILOT ===\n\n";
+$body  = "=== MESSAGE CONTACT SAHLIYA ===\n\n";
 $body .= "Date    : " . date('d/m/Y H:i') . "\n";
 $body .= "IP      : {$ip}\n\n";
 $body .= "--- Expéditeur ---\n";
@@ -131,7 +131,7 @@ $body .= "Répondre à : {$email}\n";
 
 $headers  = "From: " . MAIL_FROM_NAME . " <" . MAIL_FROM . ">\r\n";
 $headers .= "Reply-To: {$prenom} {$nom} <{$email}>\r\n";
-$headers .= "X-Mailer: EduPilot-PHP/1.0\r\n";
+$headers .= "X-Mailer: Sahliya-PHP/1.0\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit\r\n";
@@ -144,13 +144,13 @@ if (!$sent && !(defined('PRODUCTION') && PRODUCTION)) {
 }
 
 // Confirmation to sender
-$confirmSubject = "Votre message à EduPilot a bien été reçu";
+$confirmSubject = "Votre message à Sahliya a bien été reçu";
 $confirmBody    = "Bonjour {$prenom},\n\n";
 $confirmBody   .= "Merci de nous avoir contacté !\n\n";
 $confirmBody   .= "Nous avons bien reçu votre message (sujet : {$sujetLabel}).\n";
 $confirmBody   .= "Vous recevrez une réponse sous 24 heures ouvrées.\n\n";
-$confirmBody   .= "Pour toute urgence : contact@edupilot.app | WhatsApp +33 7 44 81 07 84\n\n";
-$confirmBody   .= "Cordialement,\nL'équipe EduPilot\n" . SITE_URL . "\n";
+$confirmBody   .= "Pour toute urgence : contact@sahliya.app | WhatsApp +33 7 44 81 07 84\n\n";
+$confirmBody   .= "Cordialement,\nL'équipe Sahliya\n" . SITE_URL . "\n";
 
 $confirmHeaders  = "From: " . MAIL_FROM_NAME . " <" . MAIL_FROM . ">\r\n";
 $confirmHeaders .= "MIME-Version: 1.0\r\n";

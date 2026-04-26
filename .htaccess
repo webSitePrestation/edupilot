@@ -1,4 +1,4 @@
-# EduPilot — .htaccess
+# Sahliya — .htaccess
 # Apache 2.4+ configuration — security headers, redirects, caching, access control
 
 # ── Engine ────────────────────────────────────────────────────────────────────
@@ -99,7 +99,7 @@ ErrorDocument 403 /index.html
 <IfModule mod_php.c>
   php_flag display_errors Off
   php_flag log_errors On
-  php_value error_log /tmp/edupilot_php_errors.log
+  php_value error_log /tmp/sahliya_php_errors.log
   php_flag expose_php Off
   php_value session.cookie_httponly 1
   php_value session.cookie_secure 1

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Grille tarifaire Sahliya — Tunisie, Algérie, Maroc (V2)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1F2937;
+  line-height: 1.6;
+  padding: 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 8px;
+  border-bottom: 3px solid #2563EB;
+  padding-bottom: 12px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: #1E40AF;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+.subtitle {
+  font-size: 15px;
+  color: #6B7280;
+  margin-bottom: 28px;
+}
+.version-badge {
+  display: inline-block;
+  background: #DBEAFE;
+  color: #1E40AF;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 12px;
+}
+.intro {
+  background: #EFF6FF;
+  border-left: 4px solid #2563EB;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.update-note {
+  background: #FEF3C7;
+  border-left: 4px solid #F59E0B;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.update-note strong { color: #92400E; }
+.country-section {
+  margin-bottom: 36px;
+  page-break-inside: avoid;
+}
+.flag-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #1F2937;
+  background: #F3F4F6;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.flag {
+  font-size: 28px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+th {
+  background: #2563EB;
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 500;
+}
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: top;
+}
+tr:nth-child(even) td {
+  background: #F9FAFB;
+}
+.plan-pro {
+  background: #FEF3C7 !important;
+}
+.plan-pro td {
+  font-weight: 500;
+}
+.price-big {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E40AF;
+}
+.price-eur {
+  color: #059669;
+  font-weight: 500;
+  font-size: 13px;
+}
+.price-old {
+  color: #9CA3AF;
+  text-decoration: line-through;
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+}
+.note {
+  font-size: 13px;
+  color: #6B7280;
+  font-style: italic;
+  margin-top: 6px;
+}
+.early-adopter {
+  background: #FFFBEB;
+  border: 2px solid #F59E0B;
+  padding: 22px 26px;
+  border-radius: 10px;
+  margin: 28px 0;
+}
+.early-adopter h3 {
+  color: #B45309;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 19px;
+}
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+}
+.benefits-list li {
+  padding: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-bottom: 1px dashed #FBBF24;
+  font-size: 14px;
+}
+.benefits-list li:last-child {
+  border-bottom: none;
+}
+.benefits-list .check {
+  color: #059669;
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+.benefits-list strong {
+  color: #92400E;
+}
+.included-features {
+  background: #ECFDF5;
+  border-left: 4px solid #10B981;
+  padding: 16px 22px;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+.included-features h3 {
+  color: #047857;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.included-features ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+}
+.included-features li {
+  font-size: 14px;
+  padding: 4px 0;
+}
+.included-features li::before {
+  content: "✓";
+  color: #10B981;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.scenarios {
+  margin-top: 30px;
+}
+.scenario-card {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  page-break-inside: avoid;
+}
+.scenario-title {
+  font-weight: 600;
+  color: #1E40AF;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.total-revenue {
+  font-size: 17px;
+  font-weight: 600;
+  color: #059669;
+  margin-top: 8px;
+}
+.success {
+  background: #D1FAE5;
+  color: #047857;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.print-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2563EB;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  z-index: 1000;
+}
+.print-button:hover {
+  background: #1E40AF;
+}
+@media print {
+  body { padding: 20px; }
+  .print-button { display: none; }
+  h2 { page-break-after: avoid; }
+  .country-section { page-break-inside: avoid; }
+  .scenario-card { page-break-inside: avoid; }
+}
+.footer-meta {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 12px;
+  color: #9CA3AF;
+  text-align: center;
+}
+.toc {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 16px 22px;
+  margin-bottom: 28px;
+}
+.toc h3 {
+  margin-top: 0;
+  color: #374151;
+}
+.toc ol {
+  margin-left: 18px;
+  font-size: 14px;
+}
+.toc li {
+  padding: 3px 0;
+}
+.warning-box {
+  background: #FEF2F2;
+  border-left: 4px solid #DC2626;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.warning-box strong { color: #991B1B; }
+.tip-box {
+  background: #ECFDF5;
+  border-left: 4px solid #10B981;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.tip-box strong { color: #047857; }
+.comparison-table th {
+  background: #1F2937;
+}
+.comparison-table .highlight-row {
+  background: #FEF3C7 !important;
+}
+.comparison-table .highlight-row td {
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">📄 Imprimer / Télécharger en PDF</button>
+
+<h1>Grille tarifaire Sahliya <span class="version-badge">Version 2 — Avril 2026</span></h1>
+<p class="subtitle">Solution de gestion scolaire pour écoles privées du Maghreb · Tunisie · Algérie · Maroc</p>
+
+<div class="update-note">
+<strong>📌 Mise à jour V2 :</strong> les prix ont été ajustés à la hausse pour mieux refléter la valeur réelle du produit et rester cohérents avec le marché européen et maghrébin. L'ancienne offre "-40 % à vie" a été remplacée par un programme Early Adopter plus sain pour la pérennité du business : 3 mois gratuits + -30 % la 1ère année + garantie anti-augmentation.
+</div>
+
+<div class="toc">
+<h3>Sommaire</h3>
+<ol>
+<li>Principe tarifaire simplifié</li>
+<li>Tarifs par pays (TND, DZD, MAD)</li>
+<li>Équivalents en euros</li>
+<li>Programme Early Adopter (nouvelle version)</li>
+<li>Fonctionnalités incluses dans tous les plans</li>
+<li>Scénarios de revenus prévisionnels</li>
+<li>Comparaison avec le marché européen</li>
+<li>Pourquoi ces prix sont les bons</li>
+</ol>
+</div>
+
+<div class="intro">
+<strong>Principe tarifaire simplifié :</strong> toutes les fonctionnalités sont incluses dans tous les plans. La seule différence entre Starter, Pro et Premium est le <strong>nombre maximum d'élèves et de comptes parents</strong> que l'école peut gérer. C'est plus simple à vendre et plus flexible pour le client.
+</div>
+
+<h2>1. Tunisie — tarifs en TND</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇹🇳</span>
+<span>République Tunisienne · 1 EUR ≈ 3,46 TND</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">199 TND</span><br><span class="price-eur">≈ 58 €</span><span class="price-old">avant : 129 TND</span></td>
+<td>1 990 TND/an<br><span class="price-eur">≈ 575 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">399 TND</span><br><span class="price-eur">≈ 115 €</span><span class="price-old">avant : 259 TND</span></td>
+<td>3 990 TND/an<br><span class="price-eur">≈ 1 153 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">799 TND</span><br><span class="price-eur">≈ 231 €</span><span class="price-old">avant : 499 TND</span></td>
+<td>7 990 TND/an<br><span class="price-eur">≈ 2 309 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>2. Algérie — tarifs en DZD</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇩🇿</span>
+<span>République Algérienne · 1 EUR ≈ 151 DZD</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">8 500 DZD</span><br><span class="price-eur">≈ 56 €</span><span class="price-old">avant : 5 500 DZD</span></td>
+<td>85 000 DZD/an<br><span class="price-eur">≈ 563 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">17 000 DZD</span><br><span class="price-eur">≈ 113 €</span><span class="price-old">avant : 11 000 DZD</span></td>
+<td>170 000 DZD/an<br><span class="price-eur">≈ 1 126 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">34 000 DZD</span><br><span class="price-eur">≈ 225 €</span><span class="price-old">avant : 20 000 DZD</span></td>
+<td>340 000 DZD/an<br><span class="price-eur">≈ 2 252 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>3. Maroc — tarifs en MAD</h2>
+<div class="country-section">
+<div class="flag-title">
+<span class="flag">🇲🇦</span>
+<span>Royaume du Maroc · 1 EUR ≈ 10,57 MAD</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Mensuel</th>
+<th>Annuel (2 mois offerts)</th>
+<th>Élèves max</th>
+<th>Parents max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter</strong><br><span class="note">Petite école</span></td>
+<td><span class="price-big">599 MAD</span><br><span class="price-eur">≈ 57 €</span><span class="price-old">avant : 390 MAD</span></td>
+<td>5 990 MAD/an<br><span class="price-eur">≈ 567 €</span></td>
+<td>200</td>
+<td>400</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro</strong> ⭐<br><span class="note">Le plus choisi</span></td>
+<td><span class="price-big">1 199 MAD</span><br><span class="price-eur">≈ 113 €</span><span class="price-old">avant : 790 MAD</span></td>
+<td>11 990 MAD/an<br><span class="price-eur">≈ 1 134 €</span></td>
+<td>600</td>
+<td>1 200</td>
+</tr>
+<tr>
+<td><strong>Premium</strong><br><span class="note">Grande école/groupe</span></td>
+<td><span class="price-big">2 399 MAD</span><br><span class="price-eur">≈ 227 €</span><span class="price-old">avant : 1 490 MAD</span></td>
+<td>23 990 MAD/an<br><span class="price-eur">≈ 2 270 €</span></td>
+<td>Illimités</td>
+<td>Illimités</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="early-adopter">
+<h3>🎯 Programme Lancement 2026 — Early Adopter (Version Améliorée)</h3>
+<p style="margin-bottom: 14px;">Pour les <strong>5 premières écoles</strong> de chaque pays qui signent un abonnement annuel, Sahliya offre un package exclusif Early Adopter, plus avantageux et plus sain qu'une simple remise permanente :</p>
+
+<ul class="benefits-list">
+<li><span class="check">✓</span><div><strong>3 mois entièrement gratuits</strong> : aucune carte bancaire requise pour démarrer. Vous testez la plateforme en conditions réelles avant de payer.</div></li>
+<li><span class="check">✓</span><div><strong>-30 % la première année</strong> après la période d'essai. Vous payez ~78 € au lieu de 115 € pour le plan Pro pendant 9 mois.</div></li>
+<li><span class="check">✓</span><div><strong>Garantie anti-augmentation pendant 5 ans</strong> : votre tarif n'augmentera jamais de plus de +5 % par an pendant les 5 premières années.</div></li>
+<li><span class="check">✓</span><div><strong>Accès prioritaire</strong> aux nouvelles fonctionnalités avant tous les autres clients.</div></li>
+<li><span class="check">✓</span><div><strong>Ligne de support directe</strong> avec le fondateur (WhatsApp privé).</div></li>
+<li><span class="check">✓</span><div><strong>Onboarding sur site possible</strong> (déplacement inclus si en Tunisie).</div></li>
+</ul>
+
+<table style="margin-top: 18px;">
+<thead>
+<tr>
+<th>Plan</th>
+<th>🇹🇳 Tunisie (-30 % an 1)</th>
+<th>🇩🇿 Algérie (-30 % an 1)</th>
+<th>🇲🇦 Maroc (-30 % an 1)</th>
+<th>EUR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starter EA</strong></td>
+<td>139 TND/mois</td>
+<td>5 950 DZD/mois</td>
+<td>419 MAD/mois</td>
+<td>≈ 40 €</td>
+</tr>
+<tr class="plan-pro">
+<td><strong>Pro EA ⭐</strong></td>
+<td>279 TND/mois</td>
+<td>11 900 DZD/mois</td>
+<td>839 MAD/mois</td>
+<td>≈ 81 €</td>
+</tr>
+<tr>
+<td><strong>Premium EA</strong></td>
+<td>559 TND/mois</td>
+<td>23 800 DZD/mois</td>
+<td>1 679 MAD/mois</td>
+<td>≈ 162 €</td>
+</tr>
+</tbody>
+</table>
+
+<p style="margin-top: 14px; font-size: 13px; color: #92400E; font-style: italic;">⚠️ Plus que 5 places disponibles par pays. Programme valide jusqu'au 30 juin 2026.</p>
+</div>
+
+<div class="warning-box">
+<strong>⚠️ Pourquoi pas "-40 % à vie" ?</strong> Une remise permanente coûte plus de 27 000 € sur 10 ans pour 5 écoles. Elle bloque toute évolution de la grille tarifaire et crée des inégalités empoisonnées entre clients (un client signé en mois 1 paierait moins qu'un client signé en mois 8 indéfiniment). Le combo "3 mois gratuits + -30 % la 1ère année + garantie anti-augmentation 5 ans" offre presque autant de valeur perçue, sans piéger ton modèle économique sur le long terme.
+</div>
+
+<div class="included-features">
+<h3>✅ Inclus dans TOUS les plans (Starter, Pro, Premium)</h3>
+<ul>
+<li>Gestion des notes et bulletins</li>
+<li>Suivi des présences et retards</li>
+<li>Messagerie école-parents</li>
+<li>Emplois du temps automatisés</li>
+<li>Suivi paiement scolarité</li>
+<li>Dashboards directeur en temps réel</li>
+<li>Branding personnalisé (logo + couleurs)</li>
+<li>Application mobile parents (iOS + Android)</li>
+<li>Support par WhatsApp et email</li>
+<li>Onboarding et formation inclus</li>
+<li>Sauvegardes quotidiennes</li>
+<li>Conformité RGPD et sécurité</li>
+</ul>
+</div>
+
+<h2 class="scenarios">4. Scénarios de revenus prévisionnels (en EUR)</h2>
+
+<div class="tip-box">
+<strong>📈 Effet des nouveaux prix :</strong> avec une augmentation de ~50 % des tarifs, tu atteins tes objectifs de revenus avec ~35 % d'écoles en moins. C'est plus efficace, plus rapide, et plus sain.
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 1 — Démarrage (mois 3)</div>
+<p>5 écoles signées en Pro Early Adopter (-30 % an 1)</p>
+<p>5 × 81 € = <span class="total-revenue">405 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 2 — Croissance (mois 6)</div>
+<p>10 écoles : 8 Pro Early Adopter + 2 Pro plein tarif</p>
+<p>(8 × 81 €) + (2 × 115 €) = <span class="total-revenue">878 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">📈 Scénario 3 — Année 1 (mois 12)</div>
+<p>15 écoles signées sur Tunisie + Maroc, mix réaliste</p>
+<p>(8 × 81 €) Pro EA + (5 × 115 €) Pro plein + (2 × 227 €) Premium = <span class="total-revenue">1 677 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🎯 Scénario 4 — Objectif minimum (mois 15-18)</div>
+<p>20 écoles signées : 15 Pro plein tarif + 5 Premium plein tarif</p>
+<p>(15 × 115 €) + (5 × 227 €) = <span class="total-revenue">2 860 €/mois récurrent</span></p>
+<div class="success">✅ Objectif minimum 2 500 €/mois dépassé avec seulement 20 écoles</div>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🎯 Scénario 5 — Objectif intermédiaire (mois 24-30)</div>
+<p>40 écoles signées : 30 Pro plein tarif + 10 Premium plein tarif</p>
+<p>(30 × 115 €) + (10 × 227 €) = <span class="total-revenue">5 720 €/mois récurrent</span></p>
+</div>
+
+<div class="scenario-card">
+<div class="scenario-title">🚀 Scénario 6 — Indépendance financière (mois 36+)</div>
+<p>~75 écoles signées (~0,7 % du marché privé du Maghreb)</p>
+<p>ARPU moyen 135 € × 75 écoles = <span class="total-revenue">~10 100 €/mois récurrent</span></p>
+</div>
+
+<h2>5. Positionnement vs concurrence européenne et maghrébine</h2>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Solution</th>
+<th>Prix typique</th>
+<th>Modèle</th>
+<th>Marché</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pronote (France)</td>
+<td>800-3 000 €/an</td>
+<td>Licence perpétuelle + maintenance</td>
+<td>France</td>
+</tr>
+<tr>
+<td>Educartable</td>
+<td>200-800 €/an</td>
+<td>Abonnement</td>
+<td>France (primaire)</td>
+</tr>
+<tr>
+<td>Klassroom Pro</td>
+<td>100-500 €/mois</td>
+<td>Abonnement</td>
+<td>France/International</td>
+</tr>
+<tr>
+<td>EduPage</td>
+<td>~80-150 €/mois</td>
+<td>Abonnement</td>
+<td>Europe centrale + International</td>
+</tr>
+<tr>
+<td>iSchool / GescoPlus</td>
+<td>800-2 500 €/an</td>
+<td>Licence + maintenance</td>
+<td>Maghreb</td>
+</tr>
+<tr>
+<td>PowerSchool / Classter</td>
+<td>3-8 €/élève/mois</td>
+<td>SaaS par élève</td>
+<td>International (gros)</td>
+</tr>
+<tr class="highlight-row">
+<td><strong>Sahliya Pro (V2)</strong></td>
+<td><strong>~115 €/mois (~1 153 €/an)</strong></td>
+<td><strong>Abonnement SaaS tout inclus</strong></td>
+<td><strong>Maghreb + Afrique francophone</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="note" style="margin-top: 14px;">Sahliya V2 se positionne en milieu de marché solide : aligné avec les concurrents locaux (iSchool/GescoPlus), moins cher que Pronote, plus complet qu'Educartable, et adapté au Maghreb contrairement aux solutions purement européennes.</p>
+
+<h2>6. Pourquoi ces nouveaux prix sont les bons</h2>
+<ul style="margin-left: 20px; margin-top: 12px;">
+<li style="margin-bottom: 12px;"><strong>Crédibilité auprès des écoles privées :</strong> les écoles qui facturent 200-2 000 €/mois par élève à leurs propres parents n'achètent jamais "le moins cher". Elles achètent le plus crédible. Un prix trop bas envoie 4 signaux négatifs : éditeur précaire, produit basique, support inexistant, sécurité douteuse.</li>
+<li style="margin-bottom: 12px;"><strong>Cohérence avec la concurrence locale :</strong> iSchool et GescoPlus, les solutions maghrébines de référence, facturent dans la même fourchette. Tu n'es ni au-dessus ni en-dessous, tu es exactement où il faut.</li>
+<li style="margin-bottom: 12px;"><strong>Marge brute préservée pour la croissance :</strong> avec ~85-90 % de marge brute, tu peux investir dans le marketing, l'amélioration produit, et le support de qualité. À l'ancien prix, tu étais sur la corde raide.</li>
+<li style="margin-bottom: 12px;"><strong>Valeur perçue alignée sur la valeur réelle :</strong> ton produit inclut un onboarding, une formation, un support continu, des sauvegardes, de la sécurité RGPD. Tout ça vaut bien 115 €/mois pour une école de 600 élèves (soit moins de 0,20 €/élève/mois — toujours beaucoup moins cher que les standards internationaux).</li>
+<li style="margin-bottom: 12px;"><strong>Suppression du piège "à vie" :</strong> en remplaçant la remise permanente par une remise temporaire + garantie anti-augmentation, tu protèges ton business sur le long terme tout en offrant un cadeau perçu comme tout aussi avantageux.</li>
+</ul>
+
+<h2>7. Conseils de positionnement commercial</h2>
+<ul style="margin-left: 20px; margin-top: 12px;">
+<li style="margin-bottom: 10px;"><strong>Ne mentionne JAMAIS l'EUR</strong> à un directeur tunisien, algérien ou marocain. Ils raisonnent dans leur devise locale.</li>
+<li style="margin-bottom: 10px;"><strong>Mets toujours le Pro en avant</strong> : c'est le plan que 80 % des écoles vont choisir.</li>
+<li style="margin-bottom: 10px;"><strong>Le programme Early Adopter est ta meilleure arme</strong> : crée l'urgence en disant "il ne reste que 3 places sur 5".</li>
+<li style="margin-bottom: 10px;"><strong>Pousse l'annuel</strong> : "2 mois offerts" = cash-flow stable et engagement long.</li>
+<li style="margin-bottom: 10px;"><strong>Mets l'accent sur la "garantie anti-augmentation"</strong> : c'est un argument psychologique très fort pour les directeurs prudents qui craignent les hausses surprises.</li>
+<li style="margin-bottom: 10px;"><strong>Ne baisse jamais le prix sous pression</strong> : si un directeur négocie, propose plutôt 1 mois gratuit supplémentaire ou un onboarding renforcé. Garde ta grille intacte.</li>
+<li style="margin-bottom: 10px;"><strong>L'EUR sert uniquement</strong> à tes calculs perso, ton reporting, tes prospects européens éventuels.</li>
+</ul>
+
+<div class="footer-meta">
+Sahliya · Document V2 généré le 26 avril 2026 · Tarifs susceptibles d'évoluer selon le marché<br>
+Pour télécharger en PDF : utilisez le bouton "Imprimer" et choisissez "Enregistrer en PDF" comme destination
+</div>
+
+</body>
+</html>

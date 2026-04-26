@@ -1,6 +1,6 @@
 <?php
 /**
- * EduPilot — send-demo.php
+ * Sahliya — send-demo.php
  * Handles the demo request form submission.
  * Validates · Sanitizes · Rate-limits · Sends email · Redirects
  */
@@ -120,9 +120,9 @@ if (!empty($errors)) {
 }
 
 /* ─── Build email ────────────────────────────────────────────────────────── */
-$subject = "[EduPilot] Nouvelle demande de démo — {$prenom} {$nom} ({$etablissement})";
+$subject = "[Sahliya] Nouvelle demande de démo — {$prenom} {$nom} ({$etablissement})";
 
-$body  = "=== DEMANDE DE DÉMO EDUPILOT ===\n\n";
+$body  = "=== DEMANDE DE DÉMO SAHLIYA ===\n\n";
 $body .= "Date       : " . date('d/m/Y H:i') . "\n";
 $body .= "IP         : {$ip}\n\n";
 $body .= "--- Contact ---\n";
@@ -145,7 +145,7 @@ $body .= "Répondre à : {$email}\n";
 
 $headers  = "From: " . MAIL_FROM_NAME . " <" . MAIL_FROM . ">\r\n";
 $headers .= "Reply-To: {$prenom} {$nom} <{$email}>\r\n";
-$headers .= "X-Mailer: EduPilot-PHP/1.0\r\n";
+$headers .= "X-Mailer: Sahliya-PHP/1.0\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit\r\n";
@@ -158,13 +158,13 @@ if (!$sent && !(defined('PRODUCTION') && PRODUCTION)) {
 }
 
 // Send confirmation to submitter
-$confirmSubject = "Votre demande de démo EduPilot a bien été reçue";
+$confirmSubject = "Votre demande de démo Sahliya a bien été reçue";
 $confirmBody    = "Bonjour {$prenom},\n\n";
-$confirmBody   .= "Merci de votre intérêt pour EduPilot !\n\n";
+$confirmBody   .= "Merci de votre intérêt pour Sahliya !\n\n";
 $confirmBody   .= "Nous avons bien reçu votre demande de démo pour {$etablissement}.\n";
 $confirmBody   .= "Un membre de notre équipe vous contactera sous 24 heures ouvrées.\n\n";
 $confirmBody   .= "Pour toute question urgente, écrivez-nous sur WhatsApp : +33 7 44 81 07 84\n\n";
-$confirmBody   .= "À très bientôt,\nL'équipe EduPilot\n" . SITE_URL . "\n";
+$confirmBody   .= "À très bientôt,\nL'équipe Sahliya\n" . SITE_URL . "\n";
 
 $confirmHeaders  = "From: " . MAIL_FROM_NAME . " <" . MAIL_FROM . ">\r\n";
 $confirmHeaders .= "MIME-Version: 1.0\r\n";

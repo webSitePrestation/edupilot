@@ -1,5 +1,5 @@
 /**
- * EduPilot — main.js
+ * Sahliya — main.js
  * Burger menu · Navbar scroll · FAQ accordion · Scroll animations · Smooth scroll
  */
 
@@ -237,6 +237,37 @@
       history.pushState(null, '', hash);
     });
   });
+})();
+
+/* ─────────────────────────────────────────────
+   HOME VIDEO — play on click and hide placeholder
+───────────────────────────────────────────── */
+(function initHomeVideo() {
+  const wrapper = document.querySelector('.video-wrapper');
+  if (!wrapper) return;
+
+  const video = wrapper.querySelector('video');
+  const placeholder = wrapper.querySelector('#videoPlaceholder');
+  if (!video || !placeholder) return;
+
+  const revealVideo = () => {
+    placeholder.style.display = 'none';
+  };
+
+  const playVideo = () => {
+    revealVideo();
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        // Ignore browser autoplay/play promise edge cases.
+      });
+    }
+  };
+
+  placeholder.addEventListener('click', playVideo);
+
+  // If user uses native controls, keep placeholder hidden.
+  video.addEventListener('play', revealVideo);
 })();
 
 

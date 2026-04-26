@@ -1,4 +1,4 @@
-# EduPilot — Images requises
+# Sahliya — Images requises
 
 Placez vos images dans ce dossier (`img/`). Voici la liste complète avec les specs techniques.
 
@@ -20,7 +20,7 @@ Placez vos images dans ce dossier (`img/`). Voici la liste complète avec les sp
 
 | Fichier | Emplacement | Format | Durée recommandée |
 |---|---|---|---|
-| `demo-edupilot.mp4` | `video/` | MP4 (H.264) | 2–3 minutes |
+| `pub-sahliya-vendable-v3.mp4` | `video/` | MP4 (H.264) | 2–3 minutes |
 
 > ⚠️ Compressez la vidéo avec HandBrake ou ffmpeg pour un poids < 30 Mo. Utilisez `-crf 28` pour un bon compromis qualité/taille.
 
@@ -71,5 +71,5 @@ ffmpeg -i demo-brut.mp4 \
   -vcodec libx264 -crf 28 -preset slow \
   -acodec aac -b:a 128k \
   -movflags +faststart \
-  video/demo-edupilot.mp4
+  video/pub-sahliya-vendable-v3.mp4
 ```

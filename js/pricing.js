@@ -1,5 +1,5 @@
 /**
- * EduPilot — pricing.js
+ * Sahliya — pricing.js
  * Currency toggle (TND / DZD / MAD) + monthly/annual switch.
  */
 

@@ -1,26 +1,26 @@
 <?php
 /**
- * EduPilot — config.php
+ * Sahliya — config.php
  * Centralized configuration for email sending.
  * ⚠️  Do NOT commit this file with real credentials to a public repository.
  *     Add php/config.php to your .gitignore.
  */
 
 // ── Recipient ────────────────────────────────────────────────────────────────
-define('MAIL_TO',      'contact@edupilot.app');        // Where form submissions land
-define('MAIL_TO_NAME', 'EduPilot');
+define('MAIL_TO',      'contact@sahliya.app');        // Where form submissions land
+define('MAIL_TO_NAME', 'Sahliya');
 
 // ── Sender (the "From" address) ──────────────────────────────────────────────
 // Must match a domain authorized on your mail server / SPF record.
-define('MAIL_FROM',      'noreply@edupilot.app');
-define('MAIL_FROM_NAME', 'EduPilot — Formulaire');
+define('MAIL_FROM',      'noreply@sahliya.app');
+define('MAIL_FROM_NAME', 'Sahliya — Formulaire');
 
 // ── Reply-To ─────────────────────────────────────────────────────────────────
 // Set dynamically to the form submitter's email (see send-demo.php / send-contact.php)
 
 // ── Site info ────────────────────────────────────────────────────────────────
-define('SITE_NAME', 'EduPilot');
-define('SITE_URL',  'https://edupilot.app');
+define('SITE_NAME', 'Sahliya');
+define('SITE_URL',  'https://sahliya.app');
 
 // ── Redirect after success ───────────────────────────────────────────────────
 define('REDIRECT_SUCCESS', SITE_URL . '/merci.html');

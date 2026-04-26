@@ -8,4 +8,4 @@ Disallow: /merci.html
 Disallow: /mentions-legales.html
 
 # Sitemap location
-Sitemap: https://edupilot.app/sitemap.xml
+Sitemap: https://sahliya.app/sitemap.xml

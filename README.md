@@ -1,4 +1,4 @@
-# EduPilot — Guide de déploiement
+# Sahliya — Guide de déploiement
 
 Plateforme SaaS de gestion scolaire pour établissements privés en Afrique francophone.
 
@@ -7,7 +7,7 @@ Plateforme SaaS de gestion scolaire pour établissements privés en Afrique fran
 ## 📁 Structure des fichiers
 
 ```
-edupilot/
+sahliya/
 ├── index.html              ← Page d'accueil
 ├── fonctionnalites.html    ← Détail des fonctionnalités
 ├── tarifs.html             ← Grille tarifaire (TND / DZD / MAD)
@@ -35,7 +35,7 @@ edupilot/
 │   └── README.md
 │
 ├── video/
-│   └── demo-edupilot.mp4   ← Vidéo de démo (à ajouter)
+│   └── pub-sahliya-vendable-v3.mp4   ← Vidéo de démo
 │
 ├── .htaccess               ← Sécurité, redirections, cache
 ├── robots.txt
@@ -135,4 +135,4 @@ Installez PHPMailer et modifiez `send-demo.php` / `send-contact.php` pour utilis
 
 ## 📞 Contact développeur
 
-**EduPilot** · contact@edupilot.app · WhatsApp +33 7 44 81 07 84
+**Sahliya** · contact@sahliya.app · WhatsApp +33 7 44 81 07 84
