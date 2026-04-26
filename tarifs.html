@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs EduPilot — Plans simples et transparents pour les écoles privées</title>
+  <meta name="description" content="Découvrez les tarifs EduPilot. Toutes les fonctionnalités incluses dans tous les plans. Payez uniquement selon la taille de votre école. Disponible en TND, DZD et MAD.">
+  <meta property="og:title" content="Tarifs EduPilot — Simples et transparents">
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-icon">🎓</div>
+        <span class="navbar__logo-text">Edu<span>Pilot</span></span>
+      </a>
+      <nav class="navbar__nav">
+        <a href="index.html">Accueil</a>
+        <a href="fonctionnalites.html">Fonctionnalités</a>
+        <a href="tarifs.html" class="active">Tarifs</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="demo.html" class="btn btn-primary">Demander une démo</a>
+      </div>
+      <button class="navbar__burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="navbar__mobile" id="mobileMenu">
+    <a href="index.html">Accueil</a>
+    <a href="fonctionnalites.html">Fonctionnalités</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="demo.html" class="btn btn-primary">Demander une démo</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner reveal">
+      <div class="section-label">💰 Tarification</div>
+      <h1>Tarifs simples et transparents</h1>
+      <p>Toutes les fonctionnalités incluses dans tous les plans.<br>Vous payez uniquement selon la taille de votre école.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS SECTION -->
+<section class="section">
+  <div class="container">
+
+    <!-- Toggle devise -->
+    <div class="pricing__toggle reveal">
+      <button class="currency-btn active" data-currency="tnd">🇹🇳 TND</button>
+      <button class="currency-btn" data-currency="dzd">🇩🇿 DZD</button>
+      <button class="currency-btn" data-currency="mad">🇲🇦 MAD</button>
+    </div>
+
+    <!-- Toggle mensuel/annuel -->
+    <div class="pricing__period-toggle reveal">
+      <span>Mensuel</span>
+      <button class="toggle-switch" id="periodToggle" aria-label="Basculer vers l'abonnement annuel"></button>
+      <span>Annuel <span style="color:var(--green-success);font-weight:700">(-17% / 2 mois offerts)</span></span>
+    </div>
+
+    <!-- Grille des plans -->
+    <div class="pricing__grid">
+
+      <!-- STARTER -->
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-card__target">Petite école</div>
+        <div class="pricing-card__name">Starter</div>
+        <div class="pricing-card__price-block">
+          <div>
+            <span class="pricing-card__currency" data-sym-tnd="" data-sym-dzd="" data-sym-mad=""></span>
+            <span class="pricing-card__price" data-monthly-tnd="129" data-annual-tnd="1 290" data-monthly-dzd="5 500" data-annual-dzd="55 000" data-monthly-mad="390" data-annual-mad="3 900">129</span>
+            <span class="pricing-card__currency" style="vertical-align:middle;margin-left:.25rem;margin-top:0" data-label-tnd="TND" data-label-dzd="DZD" data-label-mad="MAD">TND</span>
+          </div>
+          <div class="pricing-card__period" data-period-monthly="/mois" data-period-annual="/an">/mois</div>
+          <div class="pricing-card__annual annual-info" style="display:none">2 mois offerts inclus</div>
+        </div>
+        <hr class="pricing-card__sep">
+        <div class="pricing-card__capacity">
+          <div class="pricing-card__capacity-item">👤 <strong>Jusqu'à 200 élèves</strong></div>
+          <div class="pricing-card__capacity-item">👨‍👩‍👧 <strong>Jusqu'à 400 comptes parents</strong></div>
+        </div>
+        <div class="pricing-card__feature">✅ Toutes les fonctionnalités incluses</div>
+        <div class="pricing-card__btn">
+          <a href="demo.html" class="btn btn-outline btn-full">Choisir Starter</a>
+        </div>
+      </div>
+
+      <!-- PRO (featured) -->
+      <div class="pricing-card featured reveal reveal-delay-2">
+        <div class="pricing-card__badge">⭐ Le plus choisi</div>
+        <div class="pricing-card__target">École moyenne</div>
+        <div class="pricing-card__name">Pro</div>
+        <div class="pricing-card__price-block">
+          <div>
+            <span class="pricing-card__currency" data-sym-tnd="" data-sym-dzd="" data-sym-mad=""></span>
+            <span class="pricing-card__price" data-monthly-tnd="259" data-annual-tnd="2 590" data-monthly-dzd="11 000" data-annual-dzd="110 000" data-monthly-mad="790" data-annual-mad="7 900">259</span>
+            <span class="pricing-card__currency" style="vertical-align:middle;margin-left:.25rem;margin-top:0" data-label-tnd="TND" data-label-dzd="DZD" data-label-mad="MAD">TND</span>
+          </div>
+          <div class="pricing-card__period" data-period-monthly="/mois" data-period-annual="/an">/mois</div>
+          <div class="pricing-card__annual annual-info" style="display:none">2 mois offerts inclus</div>
+        </div>
+        <hr class="pricing-card__sep">
+        <div class="pricing-card__capacity">
+          <div class="pricing-card__capacity-item">👤 <strong>Jusqu'à 600 élèves</strong></div>
+          <div class="pricing-card__capacity-item">👨‍👩‍👧 <strong>Jusqu'à 1 200 comptes parents</strong></div>
+        </div>
+        <div class="pricing-card__feature">✅ Toutes les fonctionnalités incluses</div>
+        <div class="pricing-card__btn">
+          <a href="demo.html" class="btn btn-secondary btn-full">Choisir Pro</a>
+        </div>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="pricing-card reveal reveal-delay-3">
+        <div class="pricing-card__target">Grande école / groupe</div>
+        <div class="pricing-card__name">Premium</div>
+        <div class="pricing-card__price-block">
+          <div>
+            <span class="pricing-card__currency" data-sym-tnd="" data-sym-dzd="" data-sym-mad=""></span>
+            <span class="pricing-card__price" data-monthly-tnd="499" data-annual-tnd="4 990" data-monthly-dzd="20 000" data-annual-dzd="200 000" data-monthly-mad="1 490" data-annual-mad="14 900">499</span>
+            <span class="pricing-card__currency" style="vertical-align:middle;margin-left:.25rem;margin-top:0" data-label-tnd="TND" data-label-dzd="DZD" data-label-mad="MAD">TND</span>
+          </div>
+          <div class="pricing-card__period" data-period-monthly="/mois" data-period-annual="/an">/mois</div>
+          <div class="pricing-card__annual annual-info" style="display:none">2 mois offerts inclus</div>
+        </div>
+        <hr class="pricing-card__sep">
+        <div class="pricing-card__capacity">
+          <div class="pricing-card__capacity-item">👤 <strong>Élèves illimités</strong></div>
+          <div class="pricing-card__capacity-item">👨‍👩‍👧 <strong>Comptes parents illimités</strong></div>
+        </div>
+        <div class="pricing-card__feature">✅ Tout inclus + multi-établissements</div>
+        <div class="pricing-card__btn">
+          <a href="demo.html" class="btn btn-outline btn-full">Choisir Premium</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tout inclus -->
+    <div class="all-features-block reveal">
+      <h3>✅ Inclus dans tous les plans — sans exception</h3>
+      <div class="all-features-grid">
+        <div class="all-feature-item">Notes et bulletins automatiques</div>
+        <div class="all-feature-item">Suivi des présences et retards</div>
+        <div class="all-feature-item">Messagerie école-parents</div>
+        <div class="all-feature-item">Emplois du temps automatisés</div>
+        <div class="all-feature-item">Suivi paiement scolarité</div>
+        <div class="all-feature-item">Dashboards directeur</div>
+        <div class="all-feature-item">Branding personnalisé (logo + couleurs)</div>
+        <div class="all-feature-item">App mobile parents (iOS + Android)</div>
+        <div class="all-feature-item">Support WhatsApp et email</div>
+        <div class="all-feature-item">Onboarding et formation inclus</div>
+        <div class="all-feature-item">Sauvegardes quotidiennes</div>
+        <div class="all-feature-item">Conformité RGPD</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BANNER LANCEMENT -->
+<section class="launch-banner">
+  <div class="container">
+    <div class="launch-banner__inner reveal">
+      <div class="launch-banner__badge">Offre limitée</div>
+      <h2>🎯 Programme Lancement Tunisie 2026</h2>
+      <p><strong>-40% à vie</strong> sur tous les plans pour les 5 premières écoles tunisiennes qui rejoignent EduPilot, plus <strong>30 jours d'essai gratuit</strong>. Offre limitée.</p>
+      <a href="demo.html" class="btn btn-white btn-lg">Réserver ma place →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ TARIFS -->
+<section class="section section--light">
+  <div class="container" style="max-width:760px">
+    <div class="text-center reveal">
+      <div class="section-label">❓ FAQ Tarifs</div>
+      <h2 class="section-title">Questions sur les tarifs</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Y a-t-il des frais d'installation ? <span class="faq-chevron">▼</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Non, jamais. Le prix affiché est le prix total. L'onboarding, la formation et l'assistance au démarrage sont inclus dans tous les abonnements sans surcoût.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Puis-je changer de plan plus tard ? <span class="faq-chevron">▼</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Oui, à tout moment et sans pénalité. Si votre école grandit, vous passez au plan supérieur avec un simple email à notre équipe. La transition est immédiate, sans interruption de service.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Que se passe-t-il si je dépasse le nombre d'élèves de mon plan ? <span class="faq-chevron">▼</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Nous vous prévenons proactivement avant que vous atteigniez la limite. Nous vous proposons alors de passer au plan supérieur sans interruption du service. Vous ne serez jamais bloqué en pleine année scolaire.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Quels moyens de paiement acceptez-vous ? <span class="faq-chevron">▼</span></button>
+        <div class="faq-answer"><div class="faq-answer-inner"><p>Nous acceptons : virement bancaire (SWIFT/IBAN), carte bancaire internationale (Visa, Mastercard), et Wise pour les paiements en devises locales. D'autres moyens de paiement locaux peuvent être discutés selon les besoins.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-icon">🎓</div>
+          <span class="footer__logo-text">EduPilot</span>
+        </div>
+        <p class="footer__tagline">Solution moderne de gestion scolaire pour les écoles privées du Maghreb.</p>
+        <div class="footer__dispo"><span>🇹🇳 Tunisie</span><span>🇩🇿 Algérie</span><span>🌍 Afrique francophone</span></div>
+      </div>
+      <div class="footer__col"><h4>Solutions</h4><ul><li><a href="fonctionnalites.html">Fonctionnalités</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="demo.html">Demander une démo</a></li></ul></div>
+      <div class="footer__col"><h4>Entreprise</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4>
+        <div class="footer__contact-item">📧 <a href="mailto:contact@edupilot.app">contact@edupilot.app</a></div>
+        <div class="footer__contact-item">💬 <a href="https://wa.me/33744810784" target="_blank" rel="noopener">+33 7 44 81 07 84</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 EduPilot. Tous droits réservés.</span>
+      <div class="footer__bottom-links"><a href="mentions-legales.html">Mentions légales</a><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/pricing.js"></script>
+</body>
+</html>

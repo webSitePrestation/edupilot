@@ -1,0 +1,110 @@
+# EduPilot — .htaccess
+# Apache 2.4+ configuration — security headers, redirects, caching, access control
+
+# ── Engine ────────────────────────────────────────────────────────────────────
+Options -Indexes -MultiViews
+ServerSignature Off
+
+# ── HTTPS redirect ────────────────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect www → non-www (adjust if you prefer www)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ── Security headers ──────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Prevent MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # XSS protection (legacy browsers)
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions policy — restrict access to browser features
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+  # Content Security Policy
+  # Adjust as needed (Google Fonts requires fonts.googleapis.com and fonts.gstatic.com)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self';"
+
+  # HSTS — uncomment AFTER confirming HTTPS works correctly
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ── Protect sensitive files ───────────────────────────────────────────────────
+<FilesMatch "\.(env|json|lock|log|sql|md|sh|bak|ini|cfg)$">
+  Require all denied
+</FilesMatch>
+
+# Protect PHP config
+<Files "config.php">
+  Require all denied
+</Files>
+
+# Prevent direct access to php directory
+<IfModule mod_rewrite.c>
+  RewriteRule ^php/ - [F,L]
+</IfModule>
+
+# ── Caching ───────────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — short cache (content changes)
+  ExpiresByType text/html                    "access plus 1 hour"
+
+  # CSS & JS — medium cache (version in filename for cache-busting)
+  ExpiresByType text/css                     "access plus 1 week"
+  ExpiresByType application/javascript       "access plus 1 week"
+  ExpiresByType text/javascript              "access plus 1 week"
+
+  # Images — long cache
+  ExpiresByType image/jpeg                   "access plus 1 month"
+  ExpiresByType image/png                    "access plus 1 month"
+  ExpiresByType image/webp                   "access plus 1 month"
+  ExpiresByType image/svg+xml                "access plus 1 month"
+  ExpiresByType image/x-icon                 "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon     "access plus 1 year"
+
+  # Fonts — long cache
+  ExpiresByType font/woff2                   "access plus 1 year"
+  ExpiresByType font/woff                    "access plus 1 year"
+  ExpiresByType application/font-woff2       "access plus 1 year"
+</IfModule>
+
+# ── Compression ───────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff2
+</IfModule>
+
+# ── Error pages ───────────────────────────────────────────────────────────────
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+
+# ── PHP settings (shared hosting) ─────────────────────────────────────────────
+<IfModule mod_php.c>
+  php_flag display_errors Off
+  php_flag log_errors On
+  php_value error_log /tmp/edupilot_php_errors.log
+  php_flag expose_php Off
+  php_value session.cookie_httponly 1
+  php_value session.cookie_secure 1
+  php_value session.cookie_samesite Strict
+  php_value upload_max_filesize 8M
+  php_value post_max_size 10M
+  php_value max_execution_time 30
+</IfModule>

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow private/server-side files
+Disallow: /php/
+Disallow: /.htaccess
+Disallow: /merci.html
+Disallow: /mentions-legales.html
+
+# Sitemap location
+Sitemap: https://edupilot.app/sitemap.xml
