@@ -62,7 +62,8 @@ input,select,textarea{font-family:inherit;font-size:inherit}
 .navbar.scrolled{box-shadow:var(--shadow-md)}
 .navbar__inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:2rem}
 .navbar__logo{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
-.navbar__logo-icon{width:36px;height:36px;background:var(--blue-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem}
+.navbar__logo-icon{width:36px;height:36px;background:var(--blue-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;overflow:hidden;padding:4px}
+.navbar__logo-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .navbar__logo-text{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--text-primary);letter-spacing:-.02em}
 .navbar__logo-text span{color:var(--blue-primary)}
 .navbar__nav{display:flex;align-items:center;gap:.25rem;flex:1;justify-content:center}
@@ -272,7 +273,8 @@ input,select,textarea{font-family:inherit;font-size:inherit}
 .footer{background:var(--bg-dark);color:rgba(255,255,255,.6);padding:4rem 0 2rem}
 .footer__top{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:2rem}
 .footer__logo{display:flex;align-items:center;gap:.6rem;margin-bottom:.85rem}
-.footer__logo-icon{width:34px;height:34px;background:var(--blue-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem}
+.footer__logo-icon{width:34px;height:34px;background:var(--blue-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;overflow:hidden;padding:4px}
+.footer__logo-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .footer__logo-text{font-family:var(--font-display);font-size:1.2rem;font-weight:800;color:#fff}
 .footer__tagline{font-size:.875rem;line-height:1.65;max-width:220px;margin-bottom:1.25rem}
 .footer__dispo{display:flex;flex-direction:column;gap:.25rem;font-size:.8rem}
@@ -440,6 +442,12 @@ input,select,textarea{font-family:inherit;font-size:inherit}
 .footer-bottom{display:flex;align-items:center;justify-content:space-between;font-size:.8rem;flex-wrap:wrap;gap:.5rem}
 .footer-bottom a{color:rgba(255,255,255,.5)}
 .footer-bottom a:hover{color:#fff}
+
+/* Variante logo utilitaire (pages avec nav-logo / logo-icon) */
+.nav-logo{display:inline-flex;align-items:center;gap:.6rem}
+.logo-icon{width:34px;height:34px;background:var(--blue-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px;flex-shrink:0}
+.logo-icon img{width:100%;height:100%;object-fit:contain;display:block}
+.logo-text{font-family:var(--font-display);font-size:1.2rem;font-weight:800;color:inherit;letter-spacing:-.02em}
 
 /* ============================================================ TOAST EXTENDED */
 .toast--visible{transform:translateX(0)}
