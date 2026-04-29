@@ -505,3 +505,32 @@ footer { background: #1F2937; color: #F9FAFB; padding: 60px 40px 30px; margin-to
 .about-cta p { font-size: 18px; margin-bottom: 32px; opacity: 0.95; }
 .btn-large { padding: 16px 40px; font-size: 17px; }
 @media (max-width: 768px) { .footer-container { grid-template-columns: 1fr; gap: 30px; } .publisher-content { grid-template-columns: 1fr; gap: 30px; } .publisher-detail-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #4B5563;
+  border-radius: 999px;
+  color: #D1D5DB;
+  transition: all 0.2s ease;
+}
+
+.footer-social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-social-link:hover {
+  color: #FFFFFF;
+  border-color: #60A5FA;
+  background: rgba(96, 165, 250, 0.12);
+}
