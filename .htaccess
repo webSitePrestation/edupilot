@@ -10,8 +10,8 @@ ServerSignature Off
   RewriteEngine On
 
   # Force HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Redirect www → non-www (adjust if you prefer www)
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
