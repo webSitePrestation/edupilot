@@ -211,7 +211,7 @@ svg {
   .video-section { padding: 3rem 0; }
   .video-wrapper { margin-left: 0; margin-right: 0; }
 
-  /* Home: tags maghreb/currency/support block */
+  /* Home: tags currency/support block */
   .market-tags {
     justify-content: flex-start !important;
     gap: .65rem !important;

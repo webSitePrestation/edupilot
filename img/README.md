@@ -47,7 +47,7 @@ Placez vos images dans ce dossier (`img/`). Voici la liste complète avec les sp
 | `feat-notes.png` | 800×500 px | Capture écran saisie de notes / bulletin |
 | `feat-presences.png` | 800×500 px | Interface appel / suivi absences |
 | `feat-messagerie.png` | 800×500 px | Interface messagerie école-famille |
-| `feat-planning.png` | 800×500 px | Vue emploi du temps hebdomadaire |
+| `feat-planning.png` | 800×500 px | Vue emploi du temps sur une semaine |
 | `feat-paiements.png` | 800×500 px | Dashboard paiements / scolarité |
 | `feat-dashboard.png` | 800×500 px | Tableau de bord direction |
 | `feat-mobile.png` | 400×700 px | Screenshot app mobile parents |

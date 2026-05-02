@@ -1,6 +1,6 @@
 # Sahliya — Guide de déploiement
 
-Plateforme SaaS de gestion scolaire pour établissements privés en Afrique francophone.
+Plateforme SaaS de gestion scolaire pour établissements privés en Algérie.
 
 ---
 
@@ -10,7 +10,7 @@ Plateforme SaaS de gestion scolaire pour établissements privés en Afrique fran
 sahliya/
 ├── index.html              ← Page d'accueil
 ├── fonctionnalites.html    ← Détail des fonctionnalités
-├── tarifs.html             ← Grille tarifaire (TND / DZD / MAD)
+├── tarifs.html             ← Grille tarifaire (DZD)
 ├── demo.html               ← Formulaire demande de démo
 ├── faq.html                ← Questions fréquentes
 ├── contact.html            ← Formulaire de contact
